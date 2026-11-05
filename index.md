@@ -6,12 +6,9 @@ Benvenuto nel mio portfolio di **Data Analysis**. Qui ho raccolto i miei progett
 
 ### 📊 I Miei Progetti
 
-#### 1. Analisi delle Vendite E-Commerce
-* **Descrizione:** Analisi esplorativa dei dati di vendita per identificare i prodotti più redditizi e il comportamento d'acquisto dei clienti.
-* **Tecnologie:** Python (Pandas, Seaborn), Jupyter Notebook
-* [🔗 Vedi Codice su GitHub](https://github.com/tuo-username/nome-repo-progetto1) | [👁️ Visualizza Notebook](https://nbviewer.org/github/tuo-username/nome-repo-progetto1/blob/main/notebook.ipynb)
+#### 1. Global sustainable development 
+* **Descrizione:** Analyze and compare countries on key topics like economy, population, and CO₂ emissions.
+* **Tecnologie:** SQL, PostgreSQL
+* [🔗 Vedi Codice su GitHub](https://github.com/gcasarin/SQLProject-Global-sustainable-development) | [👁️ Visualizza codice SQL](https://github.com/gcasarin/SQLProject-Global-sustainable-development/blob/main/SQL_Project-Global_Sustainable_Developement.sql)
 
-#### 2. Dashboard di Customer Churn
-* **Descrizione:** Modello di classificazione e dashboard interattiva per prevedere il tasso di abbandono dei clienti.
-* **Tecnologie:** SQL, Scikit-Learn, Power BI
-* [🔗 Vedi Codice su GitHub](https://github.com/tuo-username/nome-repo-progetto2)
+
