@@ -37,7 +37,7 @@ footer_menu__settings:
 hero__settings:
   title: "Hi, I'm Gabriele Casarin"
   description_html: "<strong>Data Analyst</strong> passionate about turning complex datasets into clear, actionable insights using Python, SQL, and interactive dashboards."
-  image: "/images/hero.jpg"
+  image: "/images/foto_profilo_casual.JPEG"
   image_alt: "Gabriele Casarin's picture"
   cta_button: "Get in touch"
   cta_button_link: "/contact"
