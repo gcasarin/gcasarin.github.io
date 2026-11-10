@@ -1,65 +1,84 @@
 # Site settings
 title: Gabriele Casarin
-logo_image:  # Lascia vuoto o inserisci il percorso del tuo logo (es. '/images/logo.png')
-description: Data Analyst Portfolio
-social_media_share_image: #'/images/author.jpg'     #vedi se inserire
-google-analytics: G-XLEGE1T4XZ
+logo_image: ""
+description: "Data Analyst Portfolio"
+social_media_share_image: "/images/author.jpg"
+google-analytics: "G-XLEGE1T4XZ"
 
 # Author Settings
-author_name: Gabriele Casarin
-author_image: '/images/foto_profilo_casual.JPEG'
+author_name: "Gabriele Casarin"
+author_image: "/images/foto_profilo_casual.JPEG"
 
-# Header (Menu di navigazione principale)
+# Header Menu
 header_menu__settings:
   menu__items:
-    - title: 'Home'
-      url: '/'
-    - title: 'Projects'
-      url: '/projects/'
-    - title: 'About'
-      url: '/about/'
-    - title: 'Contact'
-      url: '/contact/'
+    - title: "Home"
+      url: "/"
+    - title: "Projects"
+      url: "/projects/"
+    - title: "About"
+      url: "/about/"
+    - title: "Contact"
+      url: "/contact/"
 
-# Footer (Menu a fondo pagina - pulito e coerente)
+# Footer Menu
 footer_menu__settings:
   menu__items:
-    - title: 'Home'
-      url: '/'
-    - title: 'Projects'
-      url: '/projects/'
-    - title: 'About'
-      url: '/about/'
-    - title: 'Contact'
-      url: '/contact/'
+    - title: "Home"
+      url: "/"
+    - title: "Projects"
+      url: "/projects/"
+    - title: "About"
+      url: "/about/"
+    - title: "Contact"
+      url: "/contact/"
 
-# Hero settings (La sezione in evidenza nella Homepage)
+# Hero settings
 hero__settings:
-  title: Hi, I'm Gabriele Casarin
-  description_html: <strong>Data Analyst</strong> passionate about turning complex datasets into clear, actionable insights using Python, SQL, and interactive dashboards.
-  image: /images/hero.jpg
-  image_alt: Gabriele Casarin's picture
-  cta_button: Get in touch
+  title: "Hi, I'm Gabriele Casarin"
+  description_html: "<strong>Data Analyst</strong> passionate about turning complex datasets into clear, actionable insights using Python, SQL, and interactive dashboards."
+  image: "/images/hero.jpg"
+  image_alt: "Gabriele Casarin's picture"
+  cta_button: "Get in touch"
   cta_button_link: "/contact"
-  works_button: View my projects
+  works_button: "View my projects"
   works_button_link: "/projects"
 
-# Projects settings (Sezione anteprima progetti in homepage)
+# Projects settings
 projects__settings:
-  title: Featured Works
-  title_myworks: My Projects
-  description_html: Explore my latest data analysis projects, dashboards, and machine learning models.
-  link_url: /projects
+  title: "Featured Works"
+  title_myworks: "My Projects"
+  description_html: "Explore my latest data analysis projects, dashboards, and machine learning models."
+  link_url: "/projects"
 
-# Contact form settings (Per la pagina contatti)
+# Sezioni aggiuntive lasciate vuote per evitare errori di "undefined" nel template
+blog__settings:
+  title: ""
+  title_blog: ""
+  description_html: ""
+  link_url: ""
+
+testimonials__title: ""
+testimonials__description_html: ""
+testimonials: []
+
+newsletter__settings:
+  newsletter_title: "Join my mailing list"
+  newsletter_description: "Get inspiration, updates and cool stuff!"
+  newsletter_identifier: ""
+  newsletter_button: "Subscribe"
+
 contact_form__settings:
-  form_title: Let's Connect
-  form_description: Have a project in mind or want to discuss data opportunities? Drop me a message!
-  form_button_text: Send Message
-  form_action_url: https://formspree.io/f/tuo-form-id  # Inserisci qui il tuo endpoint Formspree
+  form_title: "Let's Connect"
+  form_description: "Have a project in mind or want to discuss data opportunities? Drop me a message!"
+  form_button_text: "Send Message"
+  form_action_url: "https://formspree.io/f/tuo-form-id"
 
-# Social Links (Aggiornati con i tuoi profili professionali)
+# Social Links
 social_links:
-- {icon: "LogoLinkedin", link: "https://linkedin.com/in/gabriele-casarin06"}
-- {icon: "LogoGithub", link: "https://github.com/gcasarin"}
-- {icon: "Mail", link: "mailto:gabriele.casarin.2@gmail.com"}
+  - icon: "LogoLinkedin"
+    link: "https://linkedin.com/in/gabriele-casarin06"
+  - icon: "LogoGithub"
+    link: "https://github.com/gcasarin"
+  - icon: "Mail"
+    link: "mailto:gabriele.casarin.2@gmail.com"
