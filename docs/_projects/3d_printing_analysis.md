@@ -20,10 +20,13 @@ The main goals of this project are:
 
 ## 🛠️ Tools & Libraries Used
 * **Language:** Python
-* **Libraries:** 
-  * `Pandas` & `Numpy` (Data Cleaning & Manipulation)
-  * `Matplotlib` & `Seaborn` (Exploratory Data Visualization)
-  * `Scikit-Learn` (Predictive Modeling: Linear Regression & Random Forest)
+* **Tech Stack:** 
+  <div class="mb-3 mt-2">
+    <span class="badge mr-1" style="background-color: #3776AB; color: white; padding: 6px 12px; border-radius: 4px;">Python</span>
+    <span class="badge mr-1" style="background-color: #150458; color: white; padding: 6px 12px; border-radius: 4px;">Pandas & NumPy</span>
+    <span class="badge mr-1" style="background-color: #F7931E; color: white; padding: 6px 12px; border-radius: 4px;">Scikit-Learn</span>
+    <span class="badge mr-1" style="background-color: #2e86de; color: white; padding: 6px 12px; border-radius: 4px;">Seaborn / Matplotlib</span>
+  </div>
 
 ---
 
@@ -65,7 +68,16 @@ Correlation analysis revealed several significant relationships:
 
 ---
 
-## 🤖 Predictive Modeling
+## 🤖 Predictive Modeling & Evaluation
+
+To evaluate model performances efficiently, here is a summary of the implemented machine learning approaches:
+
+| Model | Target Variable | Main Metric | Result | Stability & Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| **Linear Regression** | Surface Roughness | $R^2$ | $0.81$ (Single fold) | Overfitting risk due to small dataset size (50 obs.) |
+| **Random Forest Regressor** | Tensile Strength | $R^2$ / MAE | $R^2 = 0.55$ / $\sim 5\text{ MPa}$ | Good model stability across $k$-fold tests |
+
+---
 
 ### 1. Surface Roughness Prediction (Linear Regression)
 An easy-to-use **Linear Regression** model was built using key features (*layer height, nozzle temperature, wall thickness, and material type*).
@@ -74,8 +86,9 @@ An easy-to-use **Linear Regression** model was built using key features (*layer 
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/10a.png" width="70%">
 </p>
 
-* **Performance:** $R^2 = 0.81$ on single fold. 
-* **Validation Note:** $k$-fold cross-validation indicated limited generalization capability due to the small sample size (50 observations), highlighting the need for more training data.
+<div class="alert alert-warning" role="alert">
+  ⚠️ <strong>Nota di Validazione:</strong> Sebbene il modello iniziale abbia registrato un ottimo $R^2 = 0.81$, la validazione incrociata ($k$-fold) ha evidenziato una limitata capacità di generalizzazione causata dal numero ridotto di osservazioni (50 campioni).
+</div>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/10.png" width="90%">
@@ -90,8 +103,9 @@ A **Random Forest Regressor** was implemented to capture non-linear relationship
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/11a.png" width="80%">
 </p>
 
-* **Performance:** $R^2 = 0.55$ and $\text{MAE} \approx 5\text{ MPa}$, showing moderate predictive power.
-* **Stability:** Repeated $k$-fold cross-validation confirmed high model stability, providing a strong foundation for future optimization with larger datasets.
+<div class="alert alert-success" role="alert">
+  ✅ <strong>Risultato chiave:</strong> Nonostante la quantità limitata di dati, i test ripetuti in $k$-fold hanno confermato una buona stabilità del modello, fornendo una solida base di partenza per future ottimizzazioni con dataset più estesi.
+</div>
 
 ---
 
