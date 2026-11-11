@@ -3,26 +3,29 @@ layout: default
 ---
 
 <div class="container">
-  <div class="container">
-    <div class="c-page-heading">
-      <h1 class="c-page-heading__title">{{page.title}}</h1>
+  
+  <!-- HEADER AFFIANCATO: IMMAGINE PRIMA, POI TITOLO E SOTTOTITOLO -->
+  <div class="container mb-5 pb-4 border-bottom">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
       
-        <p class="c-page-heading__description">{{page.subtitle}}</p>
-      
+      <!-- Colonna Sinistra: Immagine del Progetto -->
+      <div style="flex: 1; min-width: 280px; text-align: center;">
+        <img alt="{{ page.title }}" data-cms-original-src="{{ page.image }}" loading="lazy" src="{{ site.baseurl }}{{ page.image }}" class="img-fluid rounded shadow-sm border" style="max-height: 350px; width: auto; object-fit: cover;">
+      </div>
+
+      <!-- Colonna Destra: Titolo e Sottotitolo -->
+      <div style="flex: 1; min-width: 280px;">
+        <h1 class="font-weight-bold mb-3" style="font-size: 2.2rem; line-height: 1.2;">{{ page.title }}</h1>
+        {% if page.subtitle %}
+          <p class="lead text-secondary mb-0">{{ page.subtitle }}</p>
+        {% endif %}
+      </div>
+
     </div>
   </div>
-  
-  <div class="container">
-    <div class="row">
-      <div class="col col-12">
-        <div class="c-page-image animate">
-          <img alt="" data-cms-original-src="{{page.image}}" loading="lazy" src="{{ site.baseurl }}{{page.image}}">
-        </div>
-      </div>
-    </div>
-  </div> 
-  
-<div class="container animate">
+
+  <!-- CORPO DEL POST / MARKDOWN -->
+  <div class="container animate">
     <article class="post">
       <div class="post__content">  
 
@@ -36,14 +39,15 @@ layout: default
         {{ content }}
       </div>
     </article>
-</div>
+  </div>
 
+  <!-- NAVIGAZIONE TRA PROGETTI -->
   {% if page.previous.url %}
   <div class="project__navigation animate">
-    <a class="project__prev" href="{{ site.baseurl }}{{page.previous.url}}">
+    <a class="project__prev" href="{{ site.baseurl }}{{ page.previous.url }}">
       <div class="project__box">
         <span class="project__nav__info">Next Project</span>
-        <h2 class="project__nav__title">{{page.previous.title}}<i class="ion ion-md-arrow-round-forward arrow-right"></i></h2>
+        <h2 class="project__nav__title">{{ page.previous.title }}<i class="ion ion-md-arrow-round-forward arrow-right"></i></h2>
       </div>
     </a>
   </div>
