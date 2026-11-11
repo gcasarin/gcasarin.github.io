@@ -4,21 +4,21 @@ layout: default
 
 <div class="container">
   
-  <!-- HEADER AFFIANCATO: IMMAGINE PRIMA, POI TITOLO E SOTTOTITOLO -->
+  <!-- HEADER AFFIANCATO: TITOLO A SINISTRA, IMMAGINE A DESTRA -->
   <div class="container mb-5 pb-4 border-bottom">
     <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
       
-      <!-- Colonna Sinistra: Immagine del Progetto -->
-      <div style="flex: 1; min-width: 280px; text-align: center;">
-        <img alt="{{ page.title }}" data-cms-original-src="{{ page.image }}" loading="lazy" src="{{ site.baseurl }}{{ page.image }}" class="img-fluid rounded shadow-sm border" style="max-height: 350px; width: auto; object-fit: cover;">
-      </div>
-
-      <!-- Colonna Destra: Titolo e Sottotitolo -->
+      <!-- Colonna Sinistra: Titolo e Sottotitolo -->
       <div style="flex: 1; min-width: 280px;">
         <h1 class="font-weight-bold mb-3" style="font-size: 2.2rem; line-height: 1.2;">{{ page.title }}</h1>
         {% if page.subtitle %}
           <p class="lead text-secondary mb-0">{{ page.subtitle }}</p>
         {% endif %}
+      </div>
+
+      <!-- Colonna Destra: Immagine del Progetto -->
+      <div style="flex: 1; min-width: 280px; text-align: center;">
+        <img alt="{{ page.title }}" data-cms-original-src="{{ page.image }}" loading="lazy" src="{{ site.baseurl }}{{ page.image }}" class="img-fluid rounded shadow-sm border" style="max-height: 350px; width: auto; object-fit: cover;">
       </div>
 
     </div>
