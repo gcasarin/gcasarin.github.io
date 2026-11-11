@@ -3,35 +3,9 @@ layout: project
 title: "Data Analysis and Predictive Modeling in FDM 3D Printing"
 date: 2026-06-01
 excerpt: "An in-depth analysis investigating the relationships between FDM printing parameters and mechanical properties (PLA & ABS), featuring predictive ML models."
+image: https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/Project1_Portfolio_website.png
 link: https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing
 ---
-
-<!-- HEADER PERSONALIZZATO -->
-<div class="my-4 text-center">
-  <!-- 1. Immagine in primo piano -->
-  <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/Project1_Portfolio_website.png" class="img-fluid rounded shadow-sm border mb-4" alt="Project Preview" style="max-height: 450px; width: auto;">
-</div>
-
-<div class="mb-5 pb-3 border-bottom text-center">
-  <!-- 2. Badge Categoria -->
-  <span class="badge badge-primary mb-2" style="background-color: #6c5ce7; color: white; padding: 5px 10px; border-radius: 4px;">Data Science & ML Case Study</span>
-  
-  <!-- 3. Titolo Principale -->
-  <h1 class="font-weight-bold mb-3" style="font-size: 2.2rem;">Data Analysis and Predictive Modeling in FDM 3D Printing</h1>
-  
-  <!-- 4. Badge delle Tecnologie (Tech Stack) -->
-  <div class="mb-3 mt-3">
-    <span class="badge mr-1" style="background-color: #3776AB; color: white; padding: 6px 12px; border-radius: 4px;">Python</span>
-    <span class="badge mr-1" style="background-color: #150458; color: white; padding: 6px 12px; border-radius: 4px;">Pandas & NumPy</span>
-    <span class="badge mr-1" style="background-color: #F7931E; color: white; padding: 6px 12px; border-radius: 4px;">Scikit-Learn</span>
-    <span class="badge mr-1" style="background-color: #2e86de; color: white; padding: 6px 12px; border-radius: 4px;">Matplotlib / Seaborn</span>
-  </div>
-
-  <!-- 5. Breve Descrizione / Sottotitolo -->
-  <p class="lead text-secondary mt-3 mx-auto" style="max-width: 800px;">
-    An in-depth analysis investigating the relationships between FDM printing parameters and mechanical properties (PLA & ABS), featuring predictive ML models.
-  </p>
-</div>
 
 ## Project Overview
 This study uses the **"3D Printer Dataset for Mechanical Engineers"** (from Kaggle) to investigate relationships between FDM printing parameters and the mechanical properties of PLA and ABS printed specimens. 
