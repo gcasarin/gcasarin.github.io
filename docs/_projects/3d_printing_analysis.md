@@ -73,13 +73,34 @@ Correlation analysis revealed several significant relationships:
 
 To evaluate model performances efficiently, here is a summary of the implemented machine learning approaches:
 
-<div style="max-width: 800px; margin: 0 auto;">
-
-| Model | Target Variable | Main Metric | Result | Stability & Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| <strong>Linear Regression</strong> | Surface Roughness | R<sup>2</sup> | 0.81 <br><small>(Single fold)</small> | Overfitting risk due to small dataset size |
-| <strong>Random Forest Regressor</strong> | Tensile Strength | R<sup>2</sup> / MAE | R<sup>2</sup> = 0.55 <br>~ 5 MPa | Good model stability across k-fold tests |
-
+<div style="max-width: 800px; margin: 0 auto; overflow-x: auto;">
+  <table class="table table-bordered table-striped" style="font-size: 0.95rem;">
+    <thead>
+      <tr>
+        <th>Model</th>
+        <th>Target Variable</th>
+        <th>Main Metric</th>
+        <th>Result</th>
+        <th>Stability & Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Linear Regression</strong></td>
+        <td>Surface Roughness</td>
+        <td>R<sup>2</sup></td>
+        <td>0.81<br><small class="text-muted">(Single fold)</small></td>
+        <td>Overfitting risk due to small dataset size</td>
+      </tr>
+      <tr>
+        <td><strong>Random Forest Regressor</strong></td>
+        <td>Tensile Strength</td>
+        <td>R<sup>2</sup> / MAE</td>
+        <td>R<sup>2</sup> = 0.55<br><small class="text-muted">~ 5 MPa</small></td>
+        <td>Good model stability across k-fold tests</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 
