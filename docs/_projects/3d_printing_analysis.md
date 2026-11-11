@@ -7,7 +7,7 @@ image: https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-a
 link: https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing
 ---
 
-## 📌 Project Overview
+## Project Overview
 This study uses the **"3D Printer Dataset for Mechanical Engineers"** (from Kaggle) to investigate relationships between FDM printing parameters and the mechanical properties of PLA and ABS printed specimens. 
 
 The main goals of this project are:
@@ -16,28 +16,20 @@ The main goals of this project are:
 
 👉 **[View Full Python Notebook on GitHub](https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/blob/main/Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing.ipynb)**
 
----
-
-## 🛠️ Tools & Libraries Used
-* **Language:** Python
-* **Tech Stack:** 
+## Tools & Libraries Used
   <div class="mb-3 mt-2">
     <span class="badge mr-1" style="background-color: #3776AB; color: white; padding: 6px 12px; border-radius: 4px;">Python</span>
     <span class="badge mr-1" style="background-color: #150458; color: white; padding: 6px 12px; border-radius: 4px;">Pandas & NumPy</span>
     <span class="badge mr-1" style="background-color: #F7931E; color: white; padding: 6px 12px; border-radius: 4px;">Scikit-Learn</span>
-    <span class="badge mr-1" style="background-color: #2e86de; color: white; padding: 6px 12px; border-radius: 4px;">Seaborn / Matplotlib</span>
+    <span class="badge mr-1" style="background-color: #2e86de; color: white; padding: 6px 12px; border-radius: 4px;">Matplotlib / Seaborn</span>
   </div>
 
----
-
-## 📊 Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 The data analysis was conducted on a dataset of 50 FDM-printed specimens (25 ABS and 25 PLA samples) produced with an Ultimaker S5 printer.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/2.png" width="45%" />
-  <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/3.png" width="45%" />
-</p>
+  <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/1.png" width="45%" />
 
 ### Key Insights:
 * **Material Performance:** PLA achieved higher tensile strength and approximately 30% lower surface roughness compared to ABS.
@@ -48,9 +40,7 @@ The data analysis was conducted on a dataset of 50 FDM-printed specimens (25 ABS
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/5.png" width="45%" />
 </p>
 
----
-
-## 📈 Correlation Assessment
+## Correlation Assessment
 
 Correlation analysis revealed several significant relationships:
 * **Layer Height vs. Surface Roughness:** Strong positive correlation ($r \approx 0.8$), confirming that larger layer heights degrade surface quality.
@@ -68,7 +58,7 @@ Correlation analysis revealed several significant relationships:
 
 ---
 
-## 🤖 Predictive Modeling & Evaluation
+## Predictive Modeling & Evaluation
 
 To evaluate model performances efficiently, here is a summary of the implemented machine learning approaches:
 
