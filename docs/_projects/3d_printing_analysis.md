@@ -14,7 +14,6 @@ badges:
     bg: "#fdcb6e"
     color: "#2d3436"
 ---
----
 
 ## Project Overview
 This study uses the **"3D Printer Dataset for Mechanical Engineers"** (from Kaggle) to investigate relationships between FDM printing parameters and the mechanical properties of PLA and ABS printed specimens. 
@@ -40,10 +39,6 @@ The main goals of this project are:
 ## Exploratory Data Analysis (EDA)
 
 The data analysis was conducted on a dataset of 50 FDM-printed specimens (25 ABS and 25 PLA samples) produced with an Ultimaker S5 printer.
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/1.png" width="45%" />
-</p>
 
 ### Key Insights:
 - **Material Performance:** PLA achieved higher tensile strength and approximately 30% lower surface roughness compared to ABS.
