@@ -5,6 +5,15 @@ date: 2026-06-01
 excerpt: "An in-depth analysis investigating the relationships between FDM printing parameters and mechanical properties (PLA & ABS), featuring predictive ML models."
 image: https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/3d-printing-project.jpg
 link: https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing
+
+badges:
+  - text: "Data Science"
+    bg: "#00cec9"
+    color: "#ffffff"
+  - text: "ML models"
+    bg: "#fdcb6e"
+    color: "#2d3436"
+---
 ---
 
 ## Project Overview
