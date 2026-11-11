@@ -46,8 +46,7 @@ The data analysis was conducted on a dataset of 50 FDM-printed specimens (25 ABS
 - **Infill Pattern Impact:** The choice of infill pattern (*grid* vs. *honeycomb*) had a limited effect across most mechanical responses, though PLA was slightly more sensitive to pattern selection regarding surface finish.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/4.png" width="45%" />
-  <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/5.png" width="45%" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/4.png" width="80%" />
 </p>
 
 ---
@@ -74,10 +73,15 @@ Correlation analysis revealed several significant relationships:
 
 To evaluate model performances efficiently, here is a summary of the implemented machine learning approaches:
 
+<div style="max-width: 800px; margin: 0 auto;">
+
 | Model | Target Variable | Main Metric | Result | Stability & Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| **Linear Regression** | Surface Roughness | $R^2$ | $0.81$ (Single fold) | Overfitting risk due to small dataset size (50 obs.) |
-| **Random Forest Regressor** | Tensile Strength | $R^2$ / MAE | $R^2 = 0.55$ / $\sim 5\text{ MPa}$ | Good model stability across $k$-fold tests |
+| <strong>Linear Regression</strong> | Surface Roughness | R<sup>2</sup> | 0.81 <br><small>(Single fold)</small> | Overfitting risk due to small dataset size |
+| <strong>Random Forest Regressor</strong> | Tensile Strength | R<sup>2</sup> / MAE | R<sup>2</sup> = 0.55 <br>~ 5 MPa | Good model stability across k-fold tests |
+
+</div>
+
 
 ### 1. Surface Roughness Prediction (Linear Regression)
 An easy-to-use **Linear Regression** model was built using key features (*layer height, nozzle temperature, wall thickness, and material type*).
