@@ -10,7 +10,7 @@ badges:
   - text: "Data Science"
     bg: "#00cec9"
     color: "#ffffff"
-  - text: "ML models"
+  - text: "Machine Learning"
     bg: "#fdcb6e"
     color: "#2d3436"
 ---
@@ -26,13 +26,14 @@ The main goals of this project are:
 
 ---
 
-## Tools & Libraries Used
-<div class="mb-3 mt-2">
-  <span class="badge mr-1" style="background-color: #3776AB; color: white; padding: 6px 12px; border-radius: 4px;">Python</span>
-  <span class="badge mr-1" style="background-color: #150458; color: white; padding: 6px 12px; border-radius: 4px;">Pandas & NumPy</span>
-  <span class="badge mr-1" style="background-color: #F7931E; color: white; padding: 6px 12px; border-radius: 4px;">Scikit-Learn</span>
-  <span class="badge mr-1" style="background-color: #2e86de; color: white; padding: 6px 12px; border-radius: 4px;">Matplotlib / Seaborn</span>
-</div>
+## Tools & Libraries 
+
+| Categoria | Tecnologie / Librerie |
+| :--- | :--- |
+| **Core Language** | Python |
+| **Data Processing** | Pandas, NumPy |
+| **Machine Learning** | Scikit-Learn |
+| **Visualization** | Matplotlib, Seaborn |
 
 ---
 
