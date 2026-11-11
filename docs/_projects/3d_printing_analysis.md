@@ -16,13 +16,17 @@ The main goals of this project are:
 
 👉 **[View Full Python Notebook on GitHub](https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/blob/main/Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing.ipynb)**
 
+---
+
 ## Tools & Libraries Used
-  <div class="mb-3 mt-2">
-    <span class="badge mr-1" style="background-color: #3776AB; color: white; padding: 6px 12px; border-radius: 4px;">Python</span>
-    <span class="badge mr-1" style="background-color: #150458; color: white; padding: 6px 12px; border-radius: 4px;">Pandas & NumPy</span>
-    <span class="badge mr-1" style="background-color: #F7931E; color: white; padding: 6px 12px; border-radius: 4px;">Scikit-Learn</span>
-    <span class="badge mr-1" style="background-color: #2e86de; color: white; padding: 6px 12px; border-radius: 4px;">Matplotlib / Seaborn</span>
-  </div>
+<div class="mb-3 mt-2">
+  <span class="badge mr-1" style="background-color: #3776AB; color: white; padding: 6px 12px; border-radius: 4px;">Python</span>
+  <span class="badge mr-1" style="background-color: #150458; color: white; padding: 6px 12px; border-radius: 4px;">Pandas & NumPy</span>
+  <span class="badge mr-1" style="background-color: #F7931E; color: white; padding: 6px 12px; border-radius: 4px;">Scikit-Learn</span>
+  <span class="badge mr-1" style="background-color: #2e86de; color: white; padding: 6px 12px; border-radius: 4px;">Matplotlib / Seaborn</span>
+</div>
+
+---
 
 ## Exploratory Data Analysis (EDA)
 
@@ -30,31 +34,36 @@ The data analysis was conducted on a dataset of 50 FDM-printed specimens (25 ABS
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/1.png" width="45%" />
+</p>
 
 ### Key Insights:
-* **Material Performance:** PLA achieved higher tensile strength and approximately 30% lower surface roughness compared to ABS.
-* **Infill Pattern Impact:** The choice of infill pattern (*grid* vs. *honeycomb*) had a limited effect across most mechanical responses, though PLA was slightly more sensitive to pattern selection regarding surface finish.
+- **Material Performance:** PLA achieved higher tensile strength and approximately 30% lower surface roughness compared to ABS.
+- **Infill Pattern Impact:** The choice of infill pattern (*grid* vs. *honeycomb*) had a limited effect across most mechanical responses, though PLA was slightly more sensitive to pattern selection regarding surface finish.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/4.png" width="45%" />
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/5.png" width="45%" />
 </p>
 
+---
+
 ## Correlation Assessment
 
 Correlation analysis revealed several significant relationships:
-* **Layer Height vs. Surface Roughness:** Strong positive correlation ($r \approx 0.8$), confirming that larger layer heights degrade surface quality.
-* **Structural Reinforcement:** Tensile strength increased with both wall thickness ($r \approx 0.4$) and infill density ($r \approx 0.36$).
+- **Layer Height vs. Surface Roughness:** Strong positive correlation ($r \approx 0.8$), confirming that larger layer heights degrade surface quality.
+- **Structural Reinforcement:** Tensile strength increased with both wall thickness ($r \approx 0.4$) and infill density ($r \approx 0.36$).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/8.png" width="80%">
 </p>
 
-* **Material Sensitivity:** PLA tensile strength was more sensitive to infill density, whereas ABS strength was influenced more by wall thickness.
+- **Material Sensitivity:** PLA tensile strength was more sensitive to infill density, whereas ABS strength was influenced more by wall thickness.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/6.png" width="80%">
 </p>
+
+---
 
 ## Predictive Modeling & Evaluation
 
@@ -92,8 +101,3 @@ A **Random Forest Regressor** was implemented to capture non-linear relationship
 </div>
 
 ---
-
-## 🔗 Links & Resources
-* 🐙 **GitHub Repository:** [Project Repo](https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing)
-* 📓 **Jupyter Notebook:** [Direct Link to Code](https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/blob/main/Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing.ipynb)
-* 📊 **Dataset:** [3D Printer Dataset on Kaggle](https://www.kaggle.com/datasets/afumetto/3dprinter/data?select=data.csv)
