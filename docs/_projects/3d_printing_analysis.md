@@ -3,9 +3,28 @@ layout: project
 title: "Data Analysis and Predictive Modeling in FDM 3D Printing"
 date: 2026-06-01
 excerpt: "An in-depth analysis investigating the relationships between FDM printing parameters and mechanical properties (PLA & ABS), featuring predictive ML models."
-image: https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/Project1_Portfolio_website.png
+# Lasciamo vuoto o rimuoviamo 'image:' nel front matter se il tema la mostra automaticamente dove non vuoi
 link: https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing
 ---
+
+<!-- HEADER PERSONALIZZATO A DUE COLONNE -->
+<div class="row align-items-center mb-5 pb-4 border-bottom">
+  <div class="col-lg-7">
+    <span class="badge badge-primary mb-2" style="background-color: #6c5ce7; color: white; padding: 5px 10px; border-radius: 4px;">Data Science & ML Case Study</span>
+    <h1 class="font-weight-bold mb-3" style="font-size: 2rem;">Data Analysis & Predictive Modeling in FDM 3D Printing</h1>
+    <p class="lead text-secondary mb-4">
+      Investigating relationships between FDM printing parameters and mechanical properties of PLA & ABS specimens using Python.
+    </p>
+    <div class="mb-3">
+      <span class="badge mr-1" style="background-color: #3776AB; color: white; padding: 6px 12px; border-radius: 4px;">Python</span>
+      <span class="badge mr-1" style="background-color: #150458; color: white; padding: 6px 12px; border-radius: 4px;">Pandas & NumPy</span>
+      <span class="badge mr-1" style="background-color: #F7931E; color: white; padding: 6px 12px; border-radius: 4px;">Scikit-Learn</span>
+    </div>
+  </div>
+  <div class="col-lg-5 text-center mt-4 mt-lg-0">
+    <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/Project1_Portfolio_website.png" class="img-fluid rounded shadow-sm border" alt="Project Preview">
+  </div>
+</div>
 
 ## Project Overview
 This study uses the **"3D Printer Dataset for Mechanical Engineers"** (from Kaggle) to investigate relationships between FDM printing parameters and the mechanical properties of PLA and ABS printed specimens. 
