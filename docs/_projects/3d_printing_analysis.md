@@ -56,8 +56,6 @@ Correlation analysis revealed several significant relationships:
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/6.png" width="80%">
 </p>
 
----
-
 ## Predictive Modeling & Evaluation
 
 To evaluate model performances efficiently, here is a summary of the implemented machine learning approaches:
@@ -66,8 +64,6 @@ To evaluate model performances efficiently, here is a summary of the implemented
 | :--- | :--- | :--- | :--- | :--- |
 | **Linear Regression** | Surface Roughness | $R^2$ | $0.81$ (Single fold) | Overfitting risk due to small dataset size (50 obs.) |
 | **Random Forest Regressor** | Tensile Strength | $R^2$ / MAE | $R^2 = 0.55$ / $\sim 5\text{ MPa}$ | Good model stability across $k$-fold tests |
-
----
 
 ### 1. Surface Roughness Prediction (Linear Regression)
 An easy-to-use **Linear Regression** model was built using key features (*layer height, nozzle temperature, wall thickness, and material type*).
@@ -83,8 +79,6 @@ An easy-to-use **Linear Regression** model was built using key features (*layer 
 <p align="center">
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/10.png" width="90%">
 </p>
-
----
 
 ### 2. Tensile Strength Prediction (Random Forest Regressor)
 A **Random Forest Regressor** was implemented to capture non-linear relationships and feature interactions.
