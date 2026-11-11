@@ -79,24 +79,21 @@ To evaluate model performances efficiently, here is a summary of the implemented
       <tr>
         <th>Model</th>
         <th>Target Variable</th>
-        <th>Main Metric</th>
-        <th>Result</th>
-        <th>Stability & Notes</th>
+        <th>Evaluation metric</th>
+        <th>Results</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><strong>Linear Regression</strong></td>
         <td>Surface Roughness</td>
-        <td>R<sup>2</sup></td>
-        <td>0.81<br><small class="text-muted">(Single fold)</small></td>
+        <td>R<sup>2</sup>=0.81<br><small class="text-muted">(Single fold)</small></td>
         <td>Overfitting risk due to small dataset size</td>
       </tr>
       <tr>
         <td><strong>Random Forest Regressor</strong></td>
         <td>Tensile Strength</td>
-        <td>R<sup>2</sup> / MAE</td>
-        <td>R<sup>2</sup> = 0.55<br><small class="text-muted">~ 5 MPa</small></td>
+        <td>R<sup>2</sup> = 0.55<br>MAE <small class="text-muted">~ 5 MPa</small></td>
         <td>Good model stability across k-fold tests</td>
       </tr>
     </tbody>
