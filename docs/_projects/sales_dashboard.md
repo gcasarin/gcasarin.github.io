@@ -1,16 +1,19 @@
 ---
 layout: project
-title: "Sales Performance and Customer Analytics Dashboards"
+title: "Tableau Sales Performance and Customer Analytics Dashboards"
 date: 2026-06-05
 excerpt: "An interactive Business Intelligence solution built in Tableau, featuring dual-perspective dashboards for tracking year-over-year sales metrics and deep-dive customer behaviors."
-image: https://raw.githubusercontent.com/GabryGit/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Sales_Dash.png
+image: https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Sales_Dash.png
 link: https://public.tableau.com/app/profile/gabriele.casarin/viz/Sales_Dashboard_Project_17510126295020/SalesDash
 badges:
-  - text: "Data Visualization"
-    bg: "#00cec9"
+  - text: "Tableau"
+    bg: "#e74c3c"
     color: "#ffffff"
   - text: "Business Intelligence"
     bg: "#0984e3"
+    color: "#ffffff"
+  - text: "Data Visualization"
+    bg: "#00cec9"
     color: "#ffffff"
 ---
 
@@ -40,7 +43,7 @@ This project delivers a comprehensive Business Intelligence solution designed to
 The dashboards are powered by structured retail transaction datasets. To ensure optimal performance and accurate relationship handling across tables, a relational data model schema was designed directly within Tableau.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GabryGit/Tableau_Project-Sales-and-Customer-Dashboard/blob/main/Charts/Datamodel-Schema.png" width="90%" style="border-radius: 4px;" alt="Data Model Schema" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Datamodel-Schema.png" width="90%" style="border-radius: 4px;" alt="Data Model Schema" />
 </p>
 
 ---
@@ -56,7 +59,7 @@ This dashboard provides a macro-level financial overview, allowing users to moni
 - **Weekly Performance Matrix:** Detailed tracking of short-term performance against weekly averages to highlight high- and low-performing periods.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/blob/main/Charts/Sales_Dash.png" width="95%" style="border-radius: 4px;" alt="Sales Dashboard View" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Sales_Dash.png" width="95%" style="border-radius: 4px;" alt="Sales Dashboard View" />
 </p>
 
 ---
@@ -72,7 +75,7 @@ Designed specifically for marketing and management teams, this view shifts focus
 - **Top Customers Ranking Table:** A detailed tabular view highlighting top 10 customers by total profit, detailing order counts and recency of last purchase.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/blob/main/Charts/Customer_Dash.png" width="95%" style="border-radius: 4px;" alt="Customer Dashboard View" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Customer_Dash.png" width="95%" style="border-radius: 4px;" alt="Customer Dashboard View" />
 </p>
 
 ---
@@ -85,7 +88,7 @@ Both dashboards are engineered for high interactivity, enabling stakeholders to 
 - **Historical Navigation:** Instant switching between temporal windows allows for robust retrospective analysis and strategic planning.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/blob/main/Charts/Filters_Panel.png" width="85%" style="border-radius: 4px;" alt="Filters and Interactivity Panel" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Filters_Panel.png" width="85%" style="border-radius: 4px;" alt="Filters and Interactivity Panel" />
 </p>
 
 ---
