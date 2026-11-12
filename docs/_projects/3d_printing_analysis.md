@@ -1,6 +1,7 @@
 ---
 layout: project
-title: "3D Printing Data Analysis and Predictive Modeling"
+title: "3D Printing"
+subtitle: "Data Analysis and Predictive Modeling"
 date: 2026-06-01
 excerpt: "An in-depth analysis investigating the relationships between FDM printing parameters and mechanical properties (PLA & ABS), featuring predictive ML models."
 image: https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/3d-printing-project.jpg
