@@ -145,7 +145,8 @@ A **Random Forest Regressor** was implemented to capture non-linear relationship
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/11a.png" width="80%">
 </p>
 
-<p>
+{: .blue-infobox}
+</p>
 **Key Result:** despite the limited dataset size, repeated <i>k</i>-fold cross-validation confirmed <mark style="background-color: #fff3cd; padding: 2px 6px; border-radius: 3px;">robust model stability</mark>, establishing a solid baseline for future optimization with larger datasets.
 </p>
 
