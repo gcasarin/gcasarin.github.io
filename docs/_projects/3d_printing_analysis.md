@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Data Analysis and Predictive Modeling in FDM 3D Printing"
+title: "3D Printing Data Analysis and Predictive Modeling"
 date: 2026-06-01
 excerpt: "An in-depth analysis investigating the relationships between FDM printing parameters and mechanical properties (PLA & ABS), featuring predictive ML models."
 image: https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/3d-printing-project.jpg
@@ -16,7 +16,7 @@ badges:
 ---
 
 ## Project Overview
-This study uses the **"3D Printer Dataset for Mechanical Engineers"** (from Kaggle) to investigate relationships between FDM printing parameters and the mechanical properties of PLA and ABS printed specimens. 
+This study uses the **"3D Printer Dataset for Mechanical Engineers"** (Kaggle) to investigate relationships between FDM printing parameters and the mechanical properties of PLA and ABS printed specimens. 
 
 The main goals of this project are:
 1. Conduct exploratory data analysis (EDA) and correlation assessment to determine key factors influencing surface roughness and tensile strength.
@@ -28,9 +28,9 @@ The main goals of this project are:
 
 ## Tools & Libraries 
 
-| Categoria | Tecnologie / Librerie |
+| Category | Language / Library |
 | :--- | :--- |
-| **Core Language** | Python |
+| **Core** | Python |
 | **Data Processing** | Pandas, NumPy |
 | **Machine Learning** | Scikit-Learn |
 | **Visualization** | Matplotlib, Seaborn |
@@ -54,8 +54,8 @@ The data analysis was conducted on a dataset of 50 FDM-printed specimens (25 ABS
 ## Correlation Assessment
 
 Correlation analysis revealed several significant relationships:
-- **Layer Height vs. Surface Roughness:** Strong positive correlation ($r \approx 0.8$), confirming that larger layer heights degrade surface quality.
-- **Structural Reinforcement:** Tensile strength increased with both wall thickness ($r \approx 0.4$) and infill density ($r \approx 0.36$).
+- **Layer Height vs. Surface Roughness:** Strong positive correlation (*r* ≈ 0.8), confirming that larger layer heights degrade surface quality.
+- **Structural Reinforcement:** Tensile strength increased with both wall thickness (*r* ≈ 0.4) and infill density (*r* ≈ 0.36).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/8.png" width="80%">
@@ -105,6 +105,8 @@ To evaluate model performances efficiently, here is a summary of the implemented
 An easy-to-use **Linear Regression** model was built using key features (*layer height, nozzle temperature, wall thickness, and material type*).
 
 ```python
+from sklearn.linear_model import LinearRegression
+
 X = df[['layer_height', 'nozzle_temperature', 'wall_thickness', 'material']]  
 y = df['roughness']   
 
@@ -132,8 +134,8 @@ linear_model_pipeline.fit(X_train, y_train)
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/10a.png" width="70%">
 </p>
 
-**Model Limitation:** Although the initial model achieved an excellent R<sup>2</sup> = 0.81, <mark style="background-color: #f8d7da; padding: 2px 6px; border-radius: 3px; color: #721c24;"><i>k</i>-fold cross-validation highlighted limited generalization</mark> due to the small sample size (50 observations).
-{: .red-infobox}
+**Key Results:** Although the initial model achieved an excellent R<sup>2</sup> = 0.81, **<i>k</i>-fold cross-validation highlighted limited generalization** due to the small sample size (50 observations).
+{: .blue-infobox}
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/10.png" width="90%">
@@ -142,11 +144,37 @@ linear_model_pipeline.fit(X_train, y_train)
 ### 2. Tensile Strength Prediction (Random Forest Regressor)
 A **Random Forest Regressor** was implemented to capture non-linear relationships and feature interactions.
 
+```python
+from sklearn.ensemble import RandomForestRegressor
+
+X2 = df.drop(columns=['roughness','elongation','tension_strenght','print_speed', 'fan_speed','bed_temperature'])
+y2 = df['tension_strenght']
+
+numerical_features2 = ['layer_height', 'wall_thickness','infill_density','nozzle_temperature'] 
+categorical_features2 = ['infill_pattern', 'material']  
+
+preprocessor2 = ColumnTransformer(
+    transformers=[
+        ('numerical', StandardScaler(), numerical_features2),   
+        ('categorical', OneHotEncoder(handle_unknown='ignore'), categorical_features2)  
+         ])                                                                                          
+
+
+random_forest_pipeline = Pipeline(steps=[
+    ('preprocessor', preprocessor2), # Il preprocessor rimane lo stesso di prima
+    ('regressor', RandomForestRegressor(n_estimators=50, max_depth=4, random_state=10))
+])
+
+X2_train, X2_test, y2_train, y2_test = train_test_split(X2, y2, test_size=0.2, random_state=15)
+
+random_forest_pipeline.fit(X2_train, y2_train)
+```
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/11a.png" width="80%">
 </p>
 
-**Key Result:** Despite the limited dataset size, repeated <i>k</i>-fold cross-validation confirmed <mark style="background-color: #fff3cd; padding: 2px 6px; border-radius: 3px;">robust model stability</mark>, establishing a solid baseline for future optimization with larger datasets.
+**Key Results:** Despite the limited dataset size, repeated <i>k</i>-fold cross-validation confirmed **robust model stability**, establishing a solid baseline for future optimization with larger datasets.
 {: .blue-infobox}
 
 ---
