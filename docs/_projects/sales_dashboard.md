@@ -100,6 +100,5 @@ This Tableau project demonstrates how robust data modeling and intuitive visual 
 
 > <span style="font-size: 0.98rem; line-height: 1.8;">
 > ▶️ **Tableau Public Dashboard:** [View Live Viz](https://public.tableau.com/app/profile/gabriele.casarin/viz/Sales_Dashboard_Project_17510126295020/SalesDash)<br>
-> 📄 **GitHub Repository:** [Project Source & Datasets](https://github.com/GabryGit/Tableau_Project-Sales-and-Customer-Dashboard)<br>
-> 📌 **Data Source:** [Tableau Project Dataset Folder](https://github.com/GabryGit/Tableau_Project-Sales-and-Customer-Dashboard/tree/main/Dataset)
+> 📌 **GitHub Repository:** [Project Source & Datasets](https://github.com/GabryGit/Tableau_Project-Sales-and-Customer-Dashboard)<br>
 > </span>
