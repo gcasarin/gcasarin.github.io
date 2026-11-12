@@ -182,6 +182,7 @@ random_forest_pipeline.fit(X2_train, y2_train)
 ## Conclusions
 
 Experimental and statistical analyses demonstrated that **PLA outperforms ABS** in FDM 3D printing, delivering on average **25% higher tensile strength** and **30% lower surface roughness**. While the infill pattern (Grid vs. Honeycomb) showed negligible impact, mechanical behavior was heavily driven by process parameters: **layer height** strongly dictated surface roughness, whereas **wall thickness** and **infill density** (especially in PLA) boosted tensile strength.
+</p>
 From a predictive modeling perspective, **Linear Regression** identified layer height and nozzle temperature as the primary drivers of roughness (R<sup>2</sup> = 0.81), though *k*-fold cross-validation (*k* = 3) exposed generalization limits due to the small sample size (50 records). Conversely, the **Random Forest Regressor** captured non-linear parameter interactions to predict tensile strength (R<sup>2</sup> = 0.55, MAE ≈ 5 MPa), proving stable under repeated *k*-fold validation and establishing a solid baseline for future optimization with larger datasets.
 
 ---
