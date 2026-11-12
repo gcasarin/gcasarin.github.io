@@ -108,7 +108,8 @@ An easy-to-use **Linear Regression** model was built using key features (*layer 
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/10a.png" width="70%">
 </p>
 
-> Sebbene il modello iniziale abbia registrato un ottimo $R^2 = 0.81$, la validazione incrociata ($k$-fold) ha evidenziato una limitata capacità di generalizzazione causata dal numero ridotto di osservazioni (50 campioni).
+{: .red-infobox}
+Sebbene il modello iniziale abbia registrato un ottimo $R^2 = 0.81$, la validazione incrociata ($k$-fold) ha evidenziato una limitata capacità di generalizzazione causata dal numero ridotto di osservazioni (50 campioni).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/10.png" width="90%">
