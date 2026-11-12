@@ -188,12 +188,13 @@
   border-left: solid 6px #E6A700;
   border-radius:8px;
 } 
-.blue-infobox{
-  padding: 0.5em 1em 0.5em 1em;
-  background-color: #EEF9FD;
-  color: #193C48;
-  border-left: solid 6px #4CB3D4;
-  border-radius:8px;
+.blue-infobox {
+  background-color: #f0f4f8; 
+  border-left: 4px solid #1e3a8a; 
+  color: #1e293b; 
+  padding: 16px 20px;
+  border-radius: 4px;
+  margin: 24px 0;
 } 
 .green-infobox{
   padding: 0.5em 1em 0.5em 1em;
