@@ -140,12 +140,12 @@ linear_model_pipeline.fit(X_train, y_train)
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/10a.png" width="95%">
 </p>
 
-**Key Results:** Although the initial model achieved an excellent R<sup>2</sup> = 0.81, **<i>k</i>-fold cross-validation highlighted limited generalization** due to the small sample size (50 observations).
-{: .blue-infobox}
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/10.png" width="95%">
 </p>
+
+**Key Results:** Although the initial model achieved an excellent R<sup>2</sup> = 0.81, **<i>k</i>-fold cross-validation highlighted limited generalization** due to the small sample size (50 observations).
+{: .blue-infobox}
 
 ### 2. Tensile Strength Prediction (Random Forest Regressor)
 A **Random Forest Regressor** was implemented to capture non-linear relationships and feature interactions.
