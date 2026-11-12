@@ -194,10 +194,7 @@ From a predictive modeling perspective, **Linear Regression** identified layer h
 ---
 
 ## Links & Resources
-<blockquote>
-  <ul style="font-size: 1rem; margin: 0; padding-left: 20px;">
-    <li>▶️ <strong>GitHub Repository:</strong> <a href="https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing">Project Repo</a></li>
-    <li>📄 <strong>Jupyter Notebook:</strong> <a href="https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/blob/main/Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing.ipynb">Direct Link to Code</a></li>
-    <li>📌 <strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/afumetto/3dprinter/data?select=data.csv">3D Printer Dataset on Kaggle</a></li>
-  </ul>
-</blockquote>
+
+▶️ **GitHub Repository:** [Project Repo](https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing)
+📄 **Jupyter Notebook:** [Direct Link to Code](https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/blob/main/Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing.ipynb)
+📌 **Dataset:** [3D Printer Dataset on Kaggle](https://www.kaggle.com/datasets/afumetto/3dprinter/data?select=data.csv)
