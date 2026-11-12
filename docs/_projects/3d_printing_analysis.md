@@ -132,8 +132,7 @@ linear_model_pipeline.fit(X_train, y_train)
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/10a.png" width="70%">
 </p>
 
-{: .red-infobox}
-Sebbene il modello iniziale abbia registrato un ottimo $R^2 = 0.81$, la validazione incrociata ($k$-fold) ha evidenziato una limitata capacità di generalizzazione causata dal numero ridotto di osservazioni (50 campioni).
+> Sebbene il modello iniziale abbia registrato un ottimo R<sup>2</sup>=0.81 la validazione incrociata (<i>k</i>-fold) ha evidenziato una limitata capacità di generalizzazione causata dal numero ridotto di osservazioni (50 campioni).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/10.png" width="90%">
