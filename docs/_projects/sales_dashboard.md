@@ -43,7 +43,7 @@ This project delivers a comprehensive Business Intelligence solution designed to
 The dashboards are powered by structured retail transaction datasets. To ensure optimal performance and accurate relationship handling across tables, a relational data model schema was designed directly within Tableau.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Datamodel-Schema.png" width="90%" style="border-radius: 4px;" alt="Data Model Schema" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Datamodel-Schema.png" width="60%" style="border-radius: 4px;" alt="Data Model Schema" />
 </p>
 
 ---
