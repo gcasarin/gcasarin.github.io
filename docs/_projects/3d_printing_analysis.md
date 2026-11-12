@@ -22,7 +22,8 @@ The main goals of this project are:
 1. Conduct exploratory data analysis (EDA) and correlation assessment to determine key factors influencing surface roughness and tensile strength.
 2. Develop predictive Machine Learning models to estimate mechanical properties based on process parameters.
 
-> <span style="font-size: 0.8rem;">▶️ **[View Full Python Notebook on GitHub](https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/blob/main/Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing.ipynb)**</span>
+🔗 **[View Full Python Notebook on GitHub](https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/blob/main/Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing.ipynb)**
+{: .blue-infobox}
 
 ---
 
