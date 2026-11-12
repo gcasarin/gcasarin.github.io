@@ -6,14 +6,14 @@ excerpt: "An interactive Business Intelligence solution built in Tableau, featur
 image: https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Sales_Dash.png
 link: https://public.tableau.com/app/profile/gabriele.casarin/viz/Sales_Dashboard_Project_17510126295020/SalesDash
 badges:
-  - text: "Tableau"
-    bg: "#e74c3c"
+  - text: "Data Visualization"
+    bg: "#A020F0"
     color: "#ffffff"
   - text: "Business Intelligence"
-    bg: "#0984e3"
+    bg: "#88f502"
     color: "#ffffff"
-  - text: "Data Visualization"
-    bg: "#00cec9"
+  - text: "Tableau"
+    bg: "#f56b02"
     color: "#ffffff"
 ---
 
@@ -23,7 +23,7 @@ This project delivers a comprehensive Business Intelligence solution designed to
 1. **Sales Dashboard:** Offers a high-level macro view of financial metrics, tracking year-over-year performance, seasonal trends, and product-level profitability.
 2. **Customer Dashboard:** Focuses on micro-level consumer behavior, analyzing customer retention, order distributions, and identifying top-tier profitable relationships.
 
-🔗 **[Explore Dashboards Live on Tableau Public](https://public.tableau.com/app/profile/gabriele.casarin/viz/Sales_Dashboard_Project_17510126295020/SalesDash)**
+♾️​ **[Explore Dashboards Live on Tableau Public](https://public.tableau.com/app/profile/gabriele.casarin/viz/Sales_Dashboard_Project_17510126295020/SalesDash)**
 {: .blue-infobox}
 
 ---
