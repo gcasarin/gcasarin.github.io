@@ -99,7 +99,7 @@ To evaluate model performances efficiently, here is a summary of the implemented
       <tr>
         <td><strong>Random Forest Regressor</strong></td>
         <td>Tensile Strength</td>
-        <td>R<sup>2</sup> = 0.55<br>MAE ~ 5 MPa</small></td>
+        <td>R<sup>2</sup> = 0.55<br>MAE ~ 5 MPa</td>
         <td>Good model stability across k-fold tests</td>
       </tr>
     </tbody>
