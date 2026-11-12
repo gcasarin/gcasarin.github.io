@@ -55,12 +55,12 @@ The data analysis was conducted on a dataset of 50 FDM-printed specimens (25 ABS
 
 Correlation analysis revealed several significant relationships:
 - **Layer Height vs. Surface Roughness:** Strong positive correlation (*r* ≈ 0.8), confirming that larger layer heights degrade surface quality.
-- **Structural Reinforcement:** Tensile strength increased with both wall thickness (*r* ≈ 0.4) and infill density (*r* ≈ 0.36).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/8.png" width="80%">
 </p>
 
+- **Structural Reinforcement:** Tensile strength increased with both wall thickness (*r* ≈ 0.4) and infill density (*r* ≈ 0.36).
 - **Material Sensitivity:** PLA tensile strength was more sensitive to infill density, whereas ABS strength was influenced more by wall thickness.
 
 <p align="center">
@@ -182,12 +182,12 @@ random_forest_pipeline.fit(X2_train, y2_train)
 ## Conclusions
 
 Experimental and statistical analyses demonstrated that **PLA outperforms ABS** in FDM 3D printing, delivering on average **25% higher tensile strength** and **30% lower surface roughness**. While the infill pattern (Grid vs. Honeycomb) showed negligible impact, mechanical behavior was heavily driven by process parameters: **layer height** strongly dictated surface roughness, whereas **wall thickness** and **infill density** (especially in PLA) boosted tensile strength.
-</p>
+
 From a predictive modeling perspective, **Linear Regression** identified layer height and nozzle temperature as the primary drivers of roughness (R<sup>2</sup> = 0.81), though *k*-fold cross-validation (*k* = 3) exposed generalization limits due to the small sample size (50 records). Conversely, the **Random Forest Regressor** captured non-linear parameter interactions to predict tensile strength (R<sup>2</sup> = 0.55, MAE ≈ 5 MPa), proving stable under repeated *k*-fold validation and establishing a solid baseline for future optimization with larger datasets.
 
 ---
 
-## 📎Links & Resources
+## Links & Resources
 * ▶️ **GitHub Repository:** [Project Repo](https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing)
 * ▶️ **Jupyter Notebook:** [Direct Link to Code](https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/blob/main/Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing.ipynb)
 * ▶️ **Dataset:** [3D Printer Dataset on Kaggle](https://www.kaggle.com/datasets/afumetto/3dprinter/data?select=data.csv)
