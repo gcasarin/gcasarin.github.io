@@ -104,6 +104,30 @@ To evaluate model performances efficiently, here is a summary of the implemented
 ### 1. Surface Roughness Prediction (Linear Regression)
 An easy-to-use **Linear Regression** model was built using key features (*layer height, nozzle temperature, wall thickness, and material type*).
 
+```python
+X = df[['layer_height', 'nozzle_temperature', 'wall_thickness', 'material']]  
+y = df['roughness']   
+
+numerical_features = ['layer_height', 'nozzle_temperature', 'wall_thickness']  
+categorical_features = ['material']   
+
+preprocessor = ColumnTransformer(
+    transformers=[
+        ('numerical', StandardScaler(), numerical_features),    
+        ('categorical', OneHotEncoder(drop='first', handle_unknown='ignore'), categorical_features) 
+         ])                                                                            
+
+linear_model_pipeline = Pipeline(
+    steps=[
+        ('preprocessor', preprocessor),
+        ('regressor', LinearRegression())]
+)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=15)
+
+linear_model_pipeline.fit(X_train, y_train)
+```
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/10a.png" width="70%">
 </p>
