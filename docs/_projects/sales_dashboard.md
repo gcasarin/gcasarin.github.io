@@ -11,7 +11,7 @@ badges:
     color: "#ffffff"
   - text: "Business Intelligence"
     bg: "#88f502"
-    color: "#ffffff"
+    color: "#2d3436"
   - text: "Tableau"
     bg: "#f56b02"
     color: "#ffffff"
