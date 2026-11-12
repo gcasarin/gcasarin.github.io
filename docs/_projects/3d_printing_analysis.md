@@ -30,7 +30,7 @@ The main goals of this project are:
 
 | Category | Language / Library |
 | :--- | :--- |
-| **Core** | Python |
+| **Core Language** | Python |
 | **Data Processing** | Pandas, NumPy |
 | **Machine Learning** | Scikit-Learn |
 | **Visualization** | Matplotlib, Seaborn |
@@ -45,10 +45,14 @@ The data analysis was conducted on a dataset of 50 FDM-printed specimens (25 ABS
 - **Material Performance:** PLA achieved higher tensile strength and approximately 30% lower surface roughness compared to ABS.
 - **Infill Pattern Impact:** The choice of infill pattern (*grid* vs. *honeycomb*) had a limited effect across most mechanical responses, though PLA was slightly more sensitive to pattern selection regarding surface finish.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/4.png" width="80%" />
-</p>
-
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 30px 0;">
+  <div style="flex: 1; min-width: 320px; max-width: 48%;">
+    <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/4.png" width="100%" style="border-radius: 4px;" alt="Chart 4" />
+  </div>
+  <div style="flex: 1; min-width: 320px; max-width: 48%;">
+    <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/5.png" width="100%" style="border-radius: 4px;" alt="Chart 5" />
+  </div>
+</div>
 ---
 
 ## Correlation Assessment
@@ -71,6 +75,7 @@ Correlation analysis revealed several significant relationships:
 
 ## Predictive Modeling & Evaluation
 
+Predictive modeling was performed to estimate surface roughness and tensile strength from FDM printing parameters.
 To evaluate model performances efficiently, here is a summary of the implemented machine learning approaches:
 
 <div style="max-width: 800px; margin: 0 auto; overflow-x: auto;">
