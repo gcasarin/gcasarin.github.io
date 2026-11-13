@@ -11,7 +11,7 @@ badges:
     bg: "#00cec9"
     color: "#ffffff"
   - text: "Machine Learning"
-    bg: "#e1fcf5
+    bg: "#969696"
     color: "#2d3436"
   - text: "Python"
     bg: "#f5dd02"
