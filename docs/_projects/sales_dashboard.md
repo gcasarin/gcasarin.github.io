@@ -43,7 +43,7 @@ This project delivers a comprehensive Business Intelligence solution designed to
 The dashboards are powered by structured retail transaction datasets. To ensure optimal performance and accurate relationship handling across tables, a relational data model schema was designed directly within Tableau.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Datamodel-Schema.png" width="60%" style="border-radius: 4px;" alt="Data Model Schema" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Datamodel-Schema.png" width="75%" style="border-radius: 4px;" alt="Data Model Schema" />
 </p>
 
 ---
@@ -59,7 +59,7 @@ This dashboard provides a macro-level financial overview, allowing users to moni
 - **Weekly Performance Matrix:** Detailed tracking of short-term performance against weekly averages to highlight high- and low-performing periods.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Sales_Dash.png" width="95%" style="border-radius: 4px;" alt="Sales Dashboard View" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Charts/sales_dash_animation.gif" width="95%" style="border-radius: 4px;" alt="Sales Dashboard View" />
 </p>
 
 ---
@@ -75,7 +75,7 @@ Designed specifically for marketing and management teams, this view shifts focus
 - **Top Customers Ranking Table:** A detailed tabular view highlighting top 10 customers by total profit, detailing order counts and recency of last purchase.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Customer_Dash.png" width="95%" style="border-radius: 4px;" alt="Customer Dashboard View" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Charts/customer_dash_animation.gif" width="95%" style="border-radius: 4px;" alt="Customer Dashboard View" />
 </p>
 
 ---
