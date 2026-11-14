@@ -65,7 +65,7 @@ Correlation analysis revealed several significant relationships:
 - **Layer Height vs. Surface Roughness:** Strong positive correlation (*r* ≈ 0.8), confirming that larger layer heights degrade surface quality.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/8.png" width="80%">
+  <img src="https://raw.githubusercontent.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/main/Project_charts/8.png" width="73%">
 </p>
 
 - **Structural Reinforcement:** Tensile strength increased with both wall thickness (*r* ≈ 0.4) and infill density (*r* ≈ 0.36).
@@ -198,7 +198,7 @@ From a predictive modeling perspective, **Linear Regression** identified layer h
 
 ## Links & Resources
 
-> <span style="font-size: 1.10rem; line-height: 1.8;">
+> <span style="font-size: 1.05rem; line-height: 1.8;">
 > ▶️ **GitHub Repository:** [Project Repo](https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing)<br>
 > 📄 **Jupyter Notebook:** [Direct Link to Code](https://github.com/gcasarin/Python_Project-Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing/blob/main/Data-Analysis-and-Predictive-Modeling-of-Mechanical-Properties-in-FDM-3D-Printing.ipynb)<br>
 > 📌 **Dataset:** [3D Printer Dataset on Kaggle](https://www.kaggle.com/datasets/afumetto/3dprinter/data?select=data.csv)
