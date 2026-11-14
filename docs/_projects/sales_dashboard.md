@@ -43,7 +43,7 @@ This project delivers a comprehensive Business Intelligence solution designed to
 The dashboards are powered by structured retail transaction datasets. To ensure optimal performance and accurate relationship handling across tables, a relational data model schema was designed directly within Tableau.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Datamodel-Schema.png" width="75%" style="border-radius: 4px;" alt="Data Model Schema" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Datamodel-Schema.png" width="80%" style="border-radius: 4px;" alt="Data Model Schema" />
 </p>
 
 ---
@@ -88,7 +88,7 @@ Both dashboards are engineered for high interactivity, enabling stakeholders to 
 - **Historical Navigation:** Instant switching between temporal windows allows for robust retrospective analysis and strategic planning.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Filters_Panel.png" width="40%" style="border-radius: 4px;" alt="Filters and Interactivity Panel" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Filters_Panel.png" width="55%" style="border-radius: 4px;" alt="Filters and Interactivity Panel" />
 </p>
 
 ---
@@ -101,7 +101,7 @@ This Tableau project demonstrates how robust data modeling and intuitive visual 
 
 ## Links & Resources
 
-> <span style="font-size: 1.10rem; line-height: 1.8;">
+> <span style="font-size: 1.05rem; line-height: 1.8;">
 > ▶️ **Tableau Public Dashboard:** [View Live Viz](https://public.tableau.com/app/profile/gabriele.casarin/viz/Sales_Dashboard_Project_17510126295020/SalesDash)<br>
 > 📌 **GitHub Repository:** [Project Source & Datasets](https://github.com/GabryGit/Tableau_Project-Sales-and-Customer-Dashboard)<br>
 > </span>
