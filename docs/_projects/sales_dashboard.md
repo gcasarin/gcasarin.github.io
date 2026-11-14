@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Tableau Sales Performance and Customer Analytics Dashboards"
+title: "Sales Performance and Customer Analytics Dashboard"
 date: 2026-06-05
 excerpt: "An interactive Business Intelligence solution built in Tableau, featuring dual-perspective dashboards for tracking year-over-year sales metrics and deep-dive customer behaviors."
 image: https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Sales_title_picture.jpeg
