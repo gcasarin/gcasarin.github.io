@@ -3,7 +3,7 @@ layout: project
 title: "Tableau Sales Performance and Customer Analytics Dashboards"
 date: 2026-06-05
 excerpt: "An interactive Business Intelligence solution built in Tableau, featuring dual-perspective dashboards for tracking year-over-year sales metrics and deep-dive customer behaviors."
-image: https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Sales_title_picture.png
+image: https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Sales_title_picture.jpeg
 link: https://public.tableau.com/app/profile/gabriele.casarin/viz/Sales_Dashboard_Project_17510126295020/SalesDash
 badges:
   - text: "Data Visualization"
@@ -33,8 +33,8 @@ This project delivers a comprehensive Business Intelligence solution designed to
 | Category | Technology / Method |
 | :--- | :--- |
 | **BI Tool** | Tableau |
-| **Data Modeling** | Relational Schemas, Joins & Relationships |
-| **Core Techniques** | Calculated Fields, Parameters, Dynamic Filters, Action Filters |
+| **Data Modeling** | Relational Schemas, Joins |
+| **Core Techniques** | Calculated Fields, Parameters, Dynamic Filters |
 
 ---
 
@@ -88,7 +88,7 @@ Both dashboards are engineered for high interactivity, enabling stakeholders to 
 - **Historical Navigation:** Instant switching between temporal windows allows for robust retrospective analysis and strategic planning.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Filters_Panel.png" width="85%" style="border-radius: 4px;" alt="Filters and Interactivity Panel" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Filters_Panel.png" width="60%" style="border-radius: 4px;" alt="Filters and Interactivity Panel" />
 </p>
 
 ---
