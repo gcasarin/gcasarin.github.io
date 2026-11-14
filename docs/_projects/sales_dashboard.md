@@ -88,7 +88,7 @@ Both dashboards are engineered for high interactivity, enabling stakeholders to 
 - **Historical Navigation:** Instant switching between temporal windows allows for robust retrospective analysis and strategic planning.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Filters_Panel.png" width="60%" style="border-radius: 4px;" alt="Filters and Interactivity Panel" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Filters_Panel.png" width="40%" style="border-radius: 4px;" alt="Filters and Interactivity Panel" />
 </p>
 
 ---
