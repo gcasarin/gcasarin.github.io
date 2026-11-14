@@ -3,7 +3,7 @@ layout: project
 title: "Tableau Sales Performance and Customer Analytics Dashboards"
 date: 2026-06-05
 excerpt: "An interactive Business Intelligence solution built in Tableau, featuring dual-perspective dashboards for tracking year-over-year sales metrics and deep-dive customer behaviors."
-image: https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Sales_Dash.png
+image: https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Sales_title_picture.png
 link: https://public.tableau.com/app/profile/gabriele.casarin/viz/Sales_Dashboard_Project_17510126295020/SalesDash
 badges:
   - text: "Data Visualization"
@@ -59,7 +59,7 @@ This dashboard provides a macro-level financial overview, allowing users to moni
 - **Weekly Performance Matrix:** Detailed tracking of short-term performance against weekly averages to highlight high- and low-performing periods.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Charts/sales_dash_animation.gif" width="95%" style="border-radius: 4px;" alt="Sales Dashboard View" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/sales_dash_animation.gif" width="95%" style="border-radius: 4px;" alt="Sales Dashboard View" />
 </p>
 
 ---
@@ -75,7 +75,7 @@ Designed specifically for marketing and management teams, this view shifts focus
 - **Top Customers Ranking Table:** A detailed tabular view highlighting top 10 customers by total profit, detailing order counts and recency of last purchase.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/Charts/customer_dash_animation.gif" width="95%" style="border-radius: 4px;" alt="Customer Dashboard View" />
+  <img src="https://raw.githubusercontent.com/gcasarin/Tableau_Project-Sales-and-Customer-Dashboard/main/Charts/customer_dash_animation.gif" width="95%" style="border-radius: 4px;" alt="Customer Dashboard View" />
 </p>
 
 ---
