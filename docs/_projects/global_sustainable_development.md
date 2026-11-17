@@ -7,13 +7,13 @@ image: https://raw.githubusercontent.com/gcasarin/SQL-Project-Global-sustainable
 link: https://github.com/gcasarin/SQLProject-Global-sustainable-development
 badges:
   - text: "Data Analysis"
-    bg: "#990347"
+    bg: "#f20266"
     color: "#ffffff"
   - text: "SQL"
-    bg: "#336791"
+    bg: "#234560"
     color: "#ffffff"
   - text: "Excel"
-    bg: "#217346"
+    bg: "#02a149"
     color: "#ffffff"
 ---
 
