@@ -4,7 +4,7 @@ title: "Mapping Global Trends: Economic, Energy & Migration Insights"
 date: 2026-06-10
 excerpt: "A multi-dataset PostgreSQL exploratory and comparative analysis examining global economic, demographic, environmental, and migration trends to support sustainable development policies."
 image: https://raw.githubusercontent.com/gcasarin/SQL-Project-Global-sustainable-development/main/cover-image.jpg
-link: https://github.com/gcasarin/SQL-Project-Global-sustainable-development
+link: https://github.com/gcasarin/SQLProject-Global-sustainable-development
 badges:
   - text: "Data Analysis"
     bg: "#990347"
