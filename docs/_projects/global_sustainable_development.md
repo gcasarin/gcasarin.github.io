@@ -10,7 +10,7 @@ badges:
     bg: "#f20266"
     color: "#ffffff"
   - text: "SQL"
-    bg: "#234560"
+    bg: "#0270c7"
     color: "#ffffff"
   - text: "Excel"
     bg: "#02a149"
