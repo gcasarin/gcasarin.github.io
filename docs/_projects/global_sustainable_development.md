@@ -24,7 +24,7 @@ The primary objectives of this study are:
 1. **Database Architecture & ETL:** Clean raw multi-source datasets using Excel Power Query and structure a normalized relational schema in PostgreSQL with primary/foreign key constraints.
 2. **Exploratory Data Analysis (EDA):** Leverage advanced SQL techniques (CTEs, Window Functions, Views, and Joins) to answer 13 targeted analytical questions covering CO₂ emissions, energy transition, demographic aging, healthcare access, and global migration routes.
 
-🔗 **[View Full SQL Script on GitHub](https://github.com/gcasarin/SQL-Project-Global-sustainable-development/blob/main/SQL_Project-Global_Sustainable_Developement.sql)**
+🔗 **[View Full SQL Script on GitHub](https://github.com/gcasarin/SQLProject-Global-sustainable-development/blob/main/SQL_Project-Global_Sustainable_Developement.sql)**
 {: .blue-infobox}
 
 ---
@@ -34,17 +34,17 @@ The primary objectives of this study are:
 | Category | Technology / Method |
 | :--- | :--- |
 | **Database Engine** | PostgreSQL |
-| **ETL & Data Cleaning** | Microsoft Excel (Power Query), SQL `UPDATE` & Standardization |
+| **ETL & Data Cleaning** | Excel - Power Query, SQL |
 | **Schema Design** | Normalized Relational Tables, Primary & Foreign Keys |
-| **Advanced SQL** | Common Table Expressions (CTEs), Window Functions (`ROW_NUMBER`, `RANK`, `LAG`, Rolling `SUM`), Views, Subqueries, Multi-table Joins |
+| **Advanced SQL** | Common Table Expressions (CTEs), Window Functions, Views, Subqueries, Multi-table Joins |
 
 ---
 
 ## Data Sources & Database Modeling
 
 The analysis integrates three distinct datasets covering 2023 snapshots alongside historical time series (2000–2023):
-- **Global Country Information Dataset (2023):** Split into 5 normalized macro-thematic tables (`general_info_2023`, `healthcare_2023`, `employment_2023`, `economy_2023`, `demographics_2023`) linked via `country` foreign keys.
-- **Global Data on Sustainable Energy (2000–2020):** Structured across 3 longitudinal tables (`energy_general_info_00_20`, `energy_sources_00_20`, `energy_renewable_00_20`) tracking electricity generation mix, energy intensity, and GDP growth.
+- **Global Country Information Dataset (2023):** Split into 5 normalized macro-thematic tables (`general_info_2023`, `healthcare_2023`, `employment_2023`, `economy_2023`, `demographics_2023`) linked via *`country`* foreign keys.
+- **Global Data on Sustainable Energy (2000–2020):** Structured across 3 tables (`energy_general_info_00_20`, `energy_sources_00_20`, `energy_renewable_00_20`) tracking electricity generation mix, energy intensity, and GDP growth.
 - **Global Missing Migrants Dataset (2014–2023):** Stored in `migration_incidents_14_23`, detailing casualties, demographic breakdowns, and incident locations.
 
 ```sql
@@ -64,32 +64,28 @@ CREATE TABLE healthcare_2023 (
 
 ## Exploratory Data Analysis & Key Queries
 
-The SQL script addresses 13 core investigative questions grouped into three analytical pillars. Below is a summary of the key methodologies and query implementations:
+The SQL script tackles 13 core investigative questions categorized into three main areas (summarized below), with each query engineered to extract meaningful insights on global sustainability.
 
 <div style="max-width: 800px; margin: 25px auto; overflow-x: auto;">
   <table class="table table-bordered table-striped" style="font-size: 0.95rem;">
     <thead>
       <tr>
-        <th>Analytical Pillar</th>
-        <th>Focus Area (Questions)</th>
-        <th>Primary SQL Techniques</th>
+        <th>Main Area</th>
+        <th>Focus Topics</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><strong>Environment & Energy</strong></td>
         <td>CO₂ emissions share, agricultural land impact, fossil vs. clean energy ratio, GDP vs. energy growth (Q1–Q7)</td>
-        <td>CTEs, <code>ROW_NUMBER()</code>, <code>LAG()</code>, Views, Left/Inner Joins</td>
       </tr>
       <tr>
         <td><strong>Economy & Demographics</strong></td>
         <td>Generational replacement rates, population aging, income tiers vs. education & healthcare access (Q8–Q12)</td>
-        <td>Custom Views, <code>CASE WHEN</code> segmentation, <code>PARTITION BY</code></td>
       </tr>
       <tr>
         <td><strong>Humanitarian & Migration</strong></td>
         <td>Casualties by region, demographic breakdown, seasonal peaks, cumulative rolling totals (Q13.1–Q13.5)</td>
-        <td>Rolling <code>SUM() OVER</code>, <code>RANK()</code>, Date transformation</td>
       </tr>
     </tbody>
   </table>
