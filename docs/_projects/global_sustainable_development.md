@@ -91,8 +91,34 @@ The SQL script tackles 13 core investigative questions categorized into three ma
   </table>
 </div>
 
-### 1. Environmental Impact: Clean vs. Fossil Energy (Q3)
-To evaluate how energy generation mixes affect emissions over a 10-year window (2010–2020), a CTE was combined with window ranking functions to compute a custom **Clean-to-Fossil Energy Ratio**:
+The most insightful queries from each category are detailed below. For a deeper dive, please refer to the [Full SQL Script](https://github.com/gcasarin/SQLProject-Global-sustainable-development/blob/main/SQL_Project-Global_Sustainable_Developement.sql).
+
+### 1. Environment & Energy
+
+#### Top 10 Global CO₂ Emitters in 2023 
+To identify the primary contributors to global emissions, a Common Table Expression (CTE) was combined with a subquery to calculate each country's percentage share of total worldwide CO₂ emissions in 2023:   
+
+```sql
+WITH co2 (country, co2_emissions, tot_co2) AS (
+    SELECT country, 
+           co2_emissions,
+           (SELECT SUM(co2_emissions) FROM general_info_2023)
+    FROM general_info_2023
+)
+SELECT country, 
+       co2_emissions,
+       ROUND((co2_emissions / tot_co2) * 100, 2) AS world_co2_percent
+FROM co2
+WHERE (co2_emissions / tot_co2) * 100 IS NOT NULL
+ORDER BY world_co2_percent DESC
+LIMIT 10;
+```
+
+Key Results: China, the USA, India, Russia, and Japan emerged as the top five emitters in 2023, collectively accounting for over 60% of global CO₂ emissions.
+{: .blue-infobox}   
+
+#### Fossil vs. Clean Energy Impact on CO₂ Emissions
+To assess how national energy mixes influenced emissions over a 10-year window (2010–2020), a CTE was created with Window Ranking Functions (*ROW_NUMBER*) to compute a custom Clean-to-Fossil Energy Ratio:   
 
 ```sql
 WITH avg_energy_co2 AS (
@@ -109,15 +135,20 @@ SELECT *,
        CASE WHEN avg_electricity_from_fuels_twh = 0 THEN NULL
             ELSE ROUND(avg_clean_electricity_twh / avg_electricity_from_fuels_twh, 2)
        END AS clean_fuel_energy_ratio,
+       ROW_NUMBER() OVER(ORDER BY avg_electricity_from_fuels_twh DESC) AS rank_fuel_electr,
+       ROW_NUMBER() OVER(ORDER BY avg_clean_electricity_twh DESC) AS rank_clean_electr,
        ROW_NUMBER() OVER(ORDER BY avg_co2_emiss_kt DESC) AS rank_co2_emiss
 FROM avg_energy_co2
-WHERE avg_electricity_from_fuels_twh IS NOT NULL
+WHERE avg_co2_emiss_kt IS NOT NULL AND avg_electricity_from_fuels_twh IS NOT NULL
 ORDER BY rank_co2_emiss
 LIMIT 15;
 ```
 
-**Key Finding:** China, the USA, India, Russia, and Japan accounted for **over 60% of global CO₂ emissions** in 2023. Furthermore, 10 of the top 15 CO₂ emitters also rank in the top 15 for both fossil fuel electricity generation and agricultural land extension.
+Key Results: Among the top 15 CO₂-emitting nations, 10 also rank in the global top 15 for fossil-fuel electricity generation, confirming a strong correlation between fossil energy reliance and emissions. The clean_fuel_energy_ratio metric effectively isolates the most virtuous countries transitioning toward nuclear and renewable sources.
 {: .blue-infobox}
+
+
+
 
 ### 2. Demographic Aging: Developed vs. Developing Nations (Q10)
 By creating reusable database views (`nations_fertility_overview`), countries were segmented by GDP per capita ($15,000 threshold) and evaluated against the demographic replacement fertility rate (2.1 children per woman):
