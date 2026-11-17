@@ -95,7 +95,7 @@ The most insightful queries from each category are detailed below. For a deeper 
 
 ### 1.  Environment & Energy
 
-<div markdown="1" style="margin-left: 25px;">
+<p style="margin-left: 25px;">
 #### Top 10 Global CO₂ Emitters in 2023 
 To identify the primary contributors to global emissions, a Common Table Expression (CTE) was combined with a subquery to calculate each country's percentage share of total        worldwide CO₂ emissions in 2023:   
 
@@ -149,12 +149,9 @@ ORDER BY rank_co2_emiss
 LIMIT 15;
 ```
 
-
 Key Results: Among the top 15 CO₂-emitting nations, 10 also rank in the global top 15 for fossil-fuel electricity generation, confirming a strong correlation between fossil energy reliance and emissions. The *clean_fuel_energy_ratio* metric effectively isolates the most virtuous countries transitioning toward nuclear and renewable sources.
 {: .blue-infobox}
-
-
-
+</p>
 
 ### 2. Demographic Aging: Developed vs. Developing Nations (Q10)
 By creating reusable database views (`nations_fertility_overview`), countries were segmented by GDP per capita ($15,000 threshold) and evaluated against the demographic replacement fertility rate (2.1 children per woman):
