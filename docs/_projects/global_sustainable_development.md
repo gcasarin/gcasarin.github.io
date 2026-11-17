@@ -1,28 +1,28 @@
 ---
 layout: project
-title: "Global Sustainable Development: Comparative SQL Analysis"
+title: "Mapping Global Trends: Economic, Energy & Migration Insights"
 date: 2026-06-10
 excerpt: "A multi-dataset PostgreSQL exploratory and comparative analysis examining global economic, demographic, environmental, and migration trends to support sustainable development policies."
 image: https://raw.githubusercontent.com/gcasarin/SQL-Project-Global-sustainable-development/main/cover-image.jpg
 link: https://github.com/gcasarin/SQL-Project-Global-sustainable-development
 badges:
-  - text: "PostgreSQL"
+  - text: "Data Analysis"
+    bg: "#990347"
+    color: "#ffffff"
+  - text: "SQL"
     bg: "#336791"
     color: "#ffffff"
-  - text: "Data Analysis"
-    bg: "#00cec9"
-    color: "#ffffff"
-  - text: "Excel Power Query"
+  - text: "Excel"
     bg: "#217346"
     color: "#ffffff"
 ---
 
-## Project Overview
+## Overview
 This project simulates a data analysis engagement for a non-profit organization dedicated to promoting global sustainable development. By integrating and querying multiple international datasets in **PostgreSQL**, the analysis uncovers cross-country patterns across economic, demographic, environmental, and humanitarian indicators to support data-driven policy recommendations.
 
 The primary objectives of this study are:
 1. **Database Architecture & ETL:** Clean raw multi-source datasets using Excel Power Query and structure a normalized relational schema in PostgreSQL with primary/foreign key constraints.
-2. **Comparative Exploratory Analysis:** Leverage advanced SQL techniques (CTEs, Window Functions, Views, and Joins) to answer 13 targeted analytical questions covering CO₂ emissions, energy transition, demographic aging, healthcare access, and global migration routes.
+2. **Exploratory Data Analysis (EDA):** Leverage advanced SQL techniques (CTEs, Window Functions, Views, and Joins) to answer 13 targeted analytical questions covering CO₂ emissions, energy transition, demographic aging, healthcare access, and global migration routes.
 
 🔗 **[View Full SQL Script on GitHub](https://github.com/gcasarin/SQL-Project-Global-sustainable-development/blob/main/SQL_Project-Global_Sustainable_Developement.sql)**
 {: .blue-infobox}
