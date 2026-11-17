@@ -113,6 +113,10 @@ The most insightful queries from each category are detailed below. For a deeper 
   ORDER BY world_co2_percent DESC
   LIMIT 10;
   ```
+  <p align="center">
+  <img src="https://github.com/gcasarin/SQLProject-Global-sustainable-development/blob/main/Charts/Q1.png"    
+    width="95%">
+  </p>
 
   Key Results: China, the USA, India, Russia, and Japan emerged as the top five emitters in 2023, collectively accounting for over 60% of global CO₂ emissions.
   {: .blue-infobox}   
