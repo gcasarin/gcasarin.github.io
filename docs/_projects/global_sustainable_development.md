@@ -96,7 +96,8 @@ The most insightful queries from each category are detailed below. For a deeper 
 ### 1.  Environment & Energy
 
 
-- **Top 10 Global CO₂ Emitters in 2023** 
+- **Top 10 Global CO₂ Emitters in 2023**
+  
   To identify the primary contributors to global emissions, a Common Table Expression (CTE) was combined with a subquery to calculate each country's percentage share of total        worldwide CO₂ emissions in 2023:   
 
   ```sql
@@ -122,6 +123,7 @@ The most insightful queries from each category are detailed below. For a deeper 
   {: .blue-infobox}   
 
 - **Fossil vs. Clean Energy Impact on CO₂ Emissions**
+  
   To assess how national energy mixes influenced emissions over a 10-year window (2010–2020), a CTE was created with Window Ranking Functions (*ROW_NUMBER*) to compute a custom      Clean-to-Fossil Energy Ratio:   
 
   ```sql
@@ -158,7 +160,7 @@ The most insightful queries from each category are detailed below. For a deeper 
 
 ### 2. Economy & Demographics
 
-- **Demographic Aging: Developed vs. Developing Nations (Q10):**
+- **Demographic Aging: Developed vs. Developing Nations**
 
   To evaluate how population aging differs across economic development stages, a reusable database view (`nations_fertility_overview`) combines a CTE with case-based segmentation    (using a $15,000 GDP per capita threshold and the 2.1 replacement fertility rate):
 
@@ -191,7 +193,7 @@ The most insightful queries from each category are detailed below. For a deeper 
   **Key Finding:** An inverse trend emerged between developed and developing nations: developing countries maintain generational replacement in nearly 70% of cases, whereas          developed nations show an aging population in over 85% of cases (replacement guaranteed in less than 15%).
   {: .blue-infobox}
 
-- **Economic Tiers vs. Education & Minimum Wage (Q11):**
+- **Economic Tiers vs. Education & Minimum Wage**
 
   To analyze how education levels and wages vary across income categories, a dedicated view (`economic_status`) classifies countries by per-capita GDP before joining employment      indicators:
 
