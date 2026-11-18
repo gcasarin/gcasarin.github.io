@@ -211,12 +211,12 @@ The most insightful queries from each category are detailed below. For a deeper 
   ORDER BY economy;
   ```
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q12.png" width="80%" style="border-radius: 4px;" alt="Grafico Q12"       />
+  </p>
+  
   **Key Finding:** More economically developed countries exhibit higher average life expectancy, driven by greater healthcare coverage (public/private) that reduces out-of-pocket        expenses and a higher density of physicians per thousand inhabitants.
   {: .blue-infobox}
-
-  <p align="center">
-    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q12.png" width="70%" style="border-radius: 4px;" alt="Grafico Q12"       />
-  </p>
 
 ### 3. Global Migration Trends 
 
