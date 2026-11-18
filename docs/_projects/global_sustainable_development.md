@@ -116,7 +116,7 @@ The most insightful queries from each category are detailed below. For a deeper 
   ORDER BY world_co2_percent DESC
   LIMIT 10;
   ```
-  <div>
+  </div>
 
   <p align="center">
   <a href="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q1.png" target="_blank">
