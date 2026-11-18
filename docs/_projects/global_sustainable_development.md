@@ -160,39 +160,6 @@ The most insightful queries from each category are detailed below. For a deeper 
 
 ### 2. Economy & Demographics
 
-- **Demographic Aging: Developed vs. Developing Nations**
-
-  To evaluate how population aging differs across economic development stages, a reusable database view (`nations_fertility_overview`) combines a CTE with case-based segmentation    (using a $15,000 GDP per capita threshold and the 2.1 replacement fertility rate):
-
-  ```sql
-  CREATE VIEW nations_fertility_overview AS (
-      WITH fertility_gdp (country, fertility_rate, population, gdp, gdp_pro_capite, demographic_situation, nation_status) AS (
-          SELECT d.country, d.fertility_rate, d.population, e.gdp, e.gdp / d.population AS gdp_pro_capite,
-                 CASE WHEN fertility_rate > 2.1 THEN 'Generational Replacement Guaranteed'
-                      ELSE 'Aging Population'
-                 END,
-                 CASE WHEN e.gdp / d.population > 15000 THEN 'Developed Country'
-                      ELSE 'Developing Country'
-                 END 
-          FROM demographics_2023 d
-          JOIN economy_2023 e ON e.country = d.country
-      )
-      SELECT nation_status, demographic_situation, COUNT(demographic_situation) AS nation_count
-      FROM fertility_gdp
-      GROUP BY demographic_situation, nation_status
-      ORDER BY nation_status, demographic_situation
-  );
-
-  SELECT *, ROUND(nation_count / SUM(nation_count) OVER(PARTITION BY nation_status), 2) AS nation_percentage
-  FROM nations_fertility_overview;
-  ```
-  <p align="center">
-    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q10.png" width="95%" style="border-radius: 4px;" alt="Grafico Q10" />
-  </p>
-  
-  **Key Finding:** An inverse trend emerged between developed and developing nations: developing countries maintain generational replacement in nearly 70% of cases, whereas          developed nations show an aging population in over 85% of cases (replacement guaranteed in less than 15%).
-  {: .blue-infobox}
-
 - **Economic Tiers vs. Education & Minimum Wage**
 
   To analyze how education levels and wages vary across income categories, a dedicated view (`economic_status`) classifies countries by per-capita GDP before joining employment      indicators:
@@ -224,6 +191,29 @@ The most insightful queries from each category are detailed below. For a deeper 
   
   **Key Finding:** Higher-income countries exhibit significantly higher levels of tertiary education enrollment and higher average hourly minimum wages.
   {: .blue-infobox}
+
+- **Economic Status vs. Healthcare & Life Expectancy**
+
+  Reusing the previously created economic_status view, this query joins healthcare indicators to examine how income tiers influence life expectancy, physician density, and out-of-   pocket medical expenses:
+
+  ```sql
+  SELECT es.economy,
+       ROUND(AVG(life_expectancy), 2) AS avg_life_expectancy,
+       ROUND(AVG(out_of_pocket_health_expenditure), 2) AS avg_out_of_pocket_health_expenditure,
+       ROUND(AVG(physicians_per_thousand), 2) AS avg_physician_per_thousand
+  FROM economic_status es
+  JOIN healthcare_2023 h ON es.country = h.country
+  WHERE physicians_per_thousand IS NOT NULL
+  GROUP BY economy
+  ORDER BY economy;
+  ```
+
+  **Key Finding:** More economically developed countries exhibit higher average life expectancy, driven by greater healthcare coverage (public/private) that reduces out-of-pocket        expenses and a higher density of physicians per thousand inhabitants.
+  {: .blue-infobox}
+
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q12.png" width="95%" style="border-radius: 4px;" alt="Grafico Q12"       />
+  </p>
 
 ### 3. Global Migration Trends & Rolling Totals (Q13.4 & Q13.5)
 Using window functions (`SUM() OVER` and `RANK() OVER`), annual cumulative casualties and peak seasonal months were isolated across the 2014–2023 period:
