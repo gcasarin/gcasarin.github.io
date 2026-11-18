@@ -215,22 +215,65 @@ The most insightful queries from each category are detailed below. For a deeper 
     <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q12.png" width="95%" style="border-radius: 4px;" alt="Grafico Q12"       />
   </p>
 
-### 3. Global Migration Trends & Rolling Totals (Q13.4 & Q13.5)
-Using window functions (`SUM() OVER` and `RANK() OVER`), annual cumulative casualties and peak seasonal months were isolated across the 2014–2023 period:
+### 3. Global Migration Trends 
 
-```sql
-WITH monthly_totals AS (
-    SELECT incident_year, month_number, SUM(number_of_dead) AS monthly_deaths
-    FROM migration_incidents_14_23
-    GROUP BY incident_year, month_number
-)
-SELECT incident_year, 
-       month_number AS incident_month,
-       monthly_deaths,
-       SUM(monthly_deaths) OVER (PARTITION BY incident_year ORDER BY month_number) AS rolling_total_deaths
-FROM monthly_totals
-ORDER BY incident_year, month_number;
-```
+- **Migration Fatalities by Geographic Region (2014–2023) (Q13.1):**
+
+  To identify the deadliest migration corridors worldwide over the decade, incident records were aggregated by geographic region and ranked by total fatalities:
+
+  ```sql
+  SELECT SUM(number_of_dead) AS total_n_dead, 
+         region_of_incident
+  FROM migration_incidents_14_23
+  GROUP BY region_of_incident
+  ORDER BY SUM(number_of_dead) DESC;
+  ```
+
+  **Key Finding:** The Mediterranean Sea stands out as the deadliest area for migration fatalities globally between 2014 and 2023, followed by North Africa and North America.
+  {: .blue-infobox}
+
+- **Chronological & Seasonal Fatality Trends (2014–2023) (Q13.3):**
+
+  To enable accurate chronological sorting and time-series analysis, the table schema was updated with a numeric `month_number` column derived from text month names via `CASE` mapping, allowing monthly and yearly aggregation of fatalities:
+
+  ```sql
+  -- Add numeric month column for chronological ordering
+  ALTER TABLE migration_incidents_14_23
+  ADD COLUMN month_number INT;
+
+  UPDATE migration_incidents_14_23
+  SET month_number = 
+      CASE LOWER(reported_month)
+          WHEN 'january' THEN 1
+          WHEN 'february' THEN 2
+          WHEN 'march' THEN 3
+          WHEN 'april' THEN 4
+          WHEN 'may' THEN 5
+          WHEN 'june' THEN 6
+          WHEN 'july' THEN 7
+          WHEN 'august' THEN 8
+          WHEN 'september' THEN 9
+          WHEN 'october' THEN 10
+          WHEN 'november' THEN 11
+          WHEN 'december' THEN 12
+          ELSE NULL
+      END;
+
+  -- Aggregate fatalities by year and month
+  SELECT month_number AS incident_month, 
+         incident_year, 
+         SUM(number_of_dead) AS monthly_deaths
+  FROM migration_incidents_14_23
+  GROUP BY incident_year, month_number
+  ORDER BY incident_year, month_number;
+  ```
+
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q13.3.png" width="95%" style="border-radius: 4px;" alt="Grafico Q13.3"       />
+  </p>
+
+  **Key Finding:** Structuring the dataset chronologically reveals distinct seasonal surges (particularly during warmer months with calmer sea conditions) alongside multi-year shifts in migration fatality patterns across the 2014–2023 timeframe.
+  {: .blue-infobox}
 
 ---
 
