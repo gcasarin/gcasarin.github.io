@@ -95,7 +95,7 @@ The most insightful queries from each category are detailed below. For a deeper 
 
 ### 1.  Environment & Energy
 
-<p style="margin-left: 25px;">
+
 #### Top 10 Global CO₂ Emitters in 2023 
 To identify the primary contributors to global emissions, a Common Table Expression (CTE) was combined with a subquery to calculate each country's percentage share of total        worldwide CO₂ emissions in 2023:   
 
