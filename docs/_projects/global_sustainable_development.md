@@ -212,7 +212,7 @@ The most insightful queries from each category are detailed below. For a deeper 
   {: .blue-infobox}
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q12.png" width="70" style="border-radius: 4px;" alt="Grafico Q12"       />
+    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q12.png" width="70%" style="border-radius: 4px;" alt="Grafico Q12"       />
   </p>
 
 ### 3. Global Migration Trends 
@@ -234,7 +234,7 @@ The most insightful queries from each category are detailed below. For a deeper 
 
 - **Chronological & Seasonal Fatality Trends (2014–2023) (Q13.3):**
 
-  To enable accurate chronological sorting and time-series analysis, the table schema was updated with a numeric `month_number` column derived from text month names via `CASE` mapping, allowing monthly and yearly aggregation of fatalities:
+  To enable accurate chronological sorting and time-series analysis, the table schema was updated with a numeric `month_number` column derived from text month names via *`CASE`* mapping, allowing monthly and yearly aggregation of fatalities:
 
   ```sql
   -- Add numeric month column for chronological ordering
@@ -288,7 +288,5 @@ Socio-economically, higher GDP per capita correlates strongly with **longer life
 ## Links & Resources
 
 > <span style="font-size: 0.98rem; line-height: 1.8;">
-> ▶️ **GitHub Repository:** [Project Repo](https://github.com/gcasarin/SQL-Project-Global-sustainable-development)<br>
-> 📄 **SQL Script:** [Direct Link to PostgreSQL Code](https://github.com/gcasarin/SQL-Project-Global-sustainable-development/blob/main/SQL_Project-Global_Sustainable_Developement.sql)<br>
-> 📌 **Output Results:** [Query Charts & Tables Folder](https://github.com/gcasarin/SQL-Project-Global-sustainable-development)
-> </span>
+> ▶️ **GitHub:** [Project Repo](https://github.com/gcasarin/SQL-Project-Global-sustainable-development)<br>
+> 📄 **SQL Script:** [Link to PostgreSQL Code](https://github.com/gcasarin/SQL-Project-Global-sustainable-development/blob/main/SQL_Project-Global_Sustainable_Developement.sql)<br>
