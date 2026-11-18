@@ -291,5 +291,5 @@ Socio-economically, higher GDP per capita correlates strongly with **longer life
 ## Links & Resources
 
 > <span style="font-size: 0.98rem; line-height: 1.8;">
-> ▶️ **GitHub:** [Project Repo]()<br>
+> ▶️ **GitHub:** [Project Repo](https://github.com/gcasarin/SQLProject-Global-sustainable-development)<br>
 > 📄 **SQL Script:** [Link to PostgreSQL Code](https://github.com/gcasarin/SQLProject-Global-sustainable-development/blob/main/SQL_Project-Global_Sustainable_Developement.sql)<br>
