@@ -212,7 +212,7 @@ The most insightful queries from each category are detailed below. For a deeper 
   {: .blue-infobox}
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q12.png" width="95%" style="border-radius: 4px;" alt="Grafico Q12"       />
+    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q12.png" width="70" style="border-radius: 4px;" alt="Grafico Q12"       />
   </p>
 
 ### 3. Global Migration Trends 
