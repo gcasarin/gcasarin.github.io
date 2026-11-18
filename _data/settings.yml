@@ -76,9 +76,9 @@ contact_form__settings:
 
 # Social Links
 social_links:
-  - icon: "LogoLinkedin"
+  - icon: "linkedin"
     link: "https://linkedin.com/in/gabriele-casarin06"
-  - icon: "LogoGithub"
+  - icon: "github"
     link: "https://github.com/gcasarin"
-  - icon: "Mail"
+  - icon: "mail"
     link: "mailto:gabriele.casarin.2@gmail.com"
