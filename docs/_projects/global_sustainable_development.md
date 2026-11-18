@@ -154,7 +154,7 @@ The most insightful queries from each category are detailed below. For a deeper 
   ```
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q3.png" width="95%" style="border-radius: 4px;" alt="Grafico Q3" />
+    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q3.png" width="100%" style="border-radius: 4px;" alt="Grafico Q3" />
   </p>
   
   **Key Results:** Among the top 15 CO₂-emitting nations, 10 also rank in the global top 15 for fossil-fuel electricity generation, confirming a strong correlation between fossil        energy reliance and emissions. The *clean_fuel_energy_ratio* metric effectively isolates the most virtuous countries transitioning toward nuclear and renewable sources.
@@ -189,7 +189,7 @@ The most insightful queries from each category are detailed below. For a deeper 
   ```
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q11.png" width="95%" style="border-radius: 4px;" alt="Grafico Q11" />
+    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q11.png" width="100%" style="border-radius: 4px;" alt="Grafico Q11" />
   </p>
   
   **Key Finding:** Higher-income countries exhibit significantly higher levels of tertiary education enrollment and higher average hourly minimum wages.
@@ -212,7 +212,7 @@ The most insightful queries from each category are detailed below. For a deeper 
   ```
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q12.png" width="80%" style="border-radius: 4px;" alt="Grafico Q12"       />
+    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q12.png" width="75%" style="border-radius: 4px;" alt="Grafico Q12"       />
   </p>
   
   **Key Finding:** More economically developed countries exhibit higher average life expectancy, driven by greater healthcare coverage (public/private) that reduces out-of-pocket        expenses and a higher density of physicians per thousand inhabitants.
@@ -272,7 +272,7 @@ The most insightful queries from each category are detailed below. For a deeper 
   ```
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q13.3.png" width="95%" style="border-radius: 4px;" alt="Grafico Q13.3"       />
+    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q13.3.png" width="100%" style="border-radius: 4px;" alt="Grafico Q13.3"       />
   </p>
 
   **Key Finding:** Structuring the dataset chronologically reveals distinct seasonal surges (particularly during warmer months with calmer sea conditions) alongside multi-year shifts in migration fatality patterns across the 2014–2023 timeframe.
