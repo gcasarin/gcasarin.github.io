@@ -148,7 +148,7 @@ The most insightful queries from each category are detailed below. For a deeper 
   LIMIT 15;
   ```
 
-<p align="center">
+  <p align="center">
     <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q3.png" width="95%" style="border-radius: 4px;" alt="Grafico Q3" />
   </p>
   
@@ -156,33 +156,72 @@ The most insightful queries from each category are detailed below. For a deeper 
   {: .blue-infobox}
 
 
-### 2. Demographic Aging: Developed vs. Developing Nations (Q10)
-By creating reusable database views (`nations_fertility_overview`), countries were segmented by GDP per capita ($15,000 threshold) and evaluated against the demographic replacement fertility rate (2.1 children per woman):
+### 2. Economy & Demographics
 
-```sql
-CREATE VIEW nations_fertility_overview AS (
-    WITH fertility_gdp AS (
-        SELECT d.country, d.fertility_rate, e.gdp / d.population AS gdp_pro_capite,
-               CASE WHEN fertility_rate > 2.1 THEN 'Generational Replacement Guaranteed'
-                    ELSE 'Aging Population'
-               END AS demographic_situation,
-               CASE WHEN e.gdp / d.population > 15000 THEN 'Developed Country'
-                    ELSE 'Developing Country'
-               END AS nation_status
-        FROM demographics_2023 d
-        JOIN economy_2023 e ON e.country = d.country
-    )
-    SELECT nation_status, demographic_situation, COUNT(demographic_situation) AS nation_count
-    FROM fertility_gdp
-    GROUP BY demographic_situation, nation_status
-);
+- **Demographic Aging: Developed vs. Developing Nations (Q10):**
 
-SELECT *, ROUND(nation_count / SUM(nation_count) OVER(PARTITION BY nation_status), 2) AS nation_percentage
-FROM nations_fertility_overview;
-```
+  To evaluate how population aging differs across economic development stages, a reusable database view (`nations_fertility_overview`) combines a CTE with case-based segmentation    (using a $15,000 GDP per capita threshold and the 2.1 replacement fertility rate):
 
-**Key Finding:** A stark demographic inversion emerged: **over 85% of developed nations** (49 out of 56) face an aging population below the replacement threshold, whereas **nearly 70% of developing nations** maintain generational replacement.
-{: .blue-infobox}
+  ```sql
+  CREATE VIEW nations_fertility_overview AS (
+      WITH fertility_gdp (country, fertility_rate, population, gdp, gdp_pro_capite, demographic_situation, nation_status) AS (
+          SELECT d.country, d.fertility_rate, d.population, e.gdp, e.gdp / d.population AS gdp_pro_capite,
+                 CASE WHEN fertility_rate > 2.1 THEN 'Generational Replacement Guaranteed'
+                      ELSE 'Aging Population'
+                 END,
+                 CASE WHEN e.gdp / d.population > 15000 THEN 'Developed Country'
+                      ELSE 'Developing Country'
+                 END 
+          FROM demographics_2023 d
+          JOIN economy_2023 e ON e.country = d.country
+      )
+      SELECT nation_status, demographic_situation, COUNT(demographic_situation) AS nation_count
+      FROM fertility_gdp
+      GROUP BY demographic_situation, nation_status
+      ORDER BY nation_status, demographic_situation
+  );
+
+  SELECT *, ROUND(nation_count / SUM(nation_count) OVER(PARTITION BY nation_status), 2) AS nation_percentage
+  FROM nations_fertility_overview;
+  ```
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q10.png" width="95%" style="border-radius: 4px;" alt="Grafico Q10" />
+  </p>
+  
+  **Key Finding:** An inverse trend emerged between developed and developing nations: developing countries maintain generational replacement in nearly 70% of cases, whereas          developed nations show an aging population in over 85% of cases (replacement guaranteed in less than 15%).
+  {: .blue-infobox}
+
+- **Economic Tiers vs. Education & Minimum Wage (Q11):**
+
+  To analyze how education levels and wages vary across income categories, a dedicated view (`economic_status`) classifies countries by per-capita GDP before joining employment      indicators:
+
+  ```sql
+  CREATE VIEW economic_status (country, economy) AS (
+      SELECT ec.country,
+             CASE 
+                 WHEN gdp / population > 30000 THEN 'High-Income Country'                
+                 WHEN gdp / population > 10000 AND gdp / population <= 30000 THEN 'Middle-Income Country'
+                 ELSE 'Low-Income Country'
+             END  
+      FROM economy_2023 ec
+      JOIN demographics_2023 d ON ec.country = d.country
+  );
+
+  SELECT economy,
+         ROUND(AVG(gross_tertiary_education_enrollment)) AS "avg_tertiary_education_enrollment %", 
+         ROUND(AVG(minimum_wage), 2) AS "avg_minimum wage $/h"
+  FROM economic_status es
+  JOIN employment_2023 em ON es.country = em.country
+  GROUP BY economy
+  ORDER BY economy;
+  ```
+
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q11.png" width="95%" style="border-radius: 4px;" alt="Grafico Q11" />
+  </p>
+  
+  **Key Finding:** Higher-income countries exhibit significantly higher levels of tertiary education enrollment and higher average hourly minimum wages.
+  {: .blue-infobox}
 
 ### 3. Global Migration Trends & Rolling Totals (Q13.4 & Q13.5)
 Using window functions (`SUM() OVER` and `RANK() OVER`), annual cumulative casualties and peak seasonal months were isolated across the 2014–2023 period:
@@ -200,12 +239,6 @@ SELECT incident_year,
 FROM monthly_totals
 ORDER BY incident_year, month_number;
 ```
-
----
-
-## Limitations & Data Considerations
-- **Missing Longitudinal Values:** Several records in the *Global Data on Sustainable Energy* dataset contained `NULL` entries for specific country-year combinations, requiring targeted filtering (`IS NOT NULL`) and outlier exclusion (e.g., Equatorial Guinea's 70% anomaly in per-capita energy consumption growth).
-- **Temporal Alignment:** Cross-dataset estimations (such as 2020 total energy consumption in Q6) relied on 2023 population figures (`demographics_2023`), introducing a minor temporal offset.
 
 ---
 
