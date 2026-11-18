@@ -118,14 +118,14 @@ The most insightful queries from each category are detailed below. For a deeper 
     <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q1.png" width="95%" style="border-radius: 4px;" alt="Grafico Q1" />
   </p>
 
-  Key Results: China, the USA, India, Russia, and Japan emerged as the top five emitters in 2023, collectively accounting for over 60% of global CO₂ emissions.
+  Key Results: China, US, India, Russia, and Japan emerged as the top five emitters in 2023, collectively accounting for over 60% of global CO₂ emissions.
   {: .blue-infobox}   
 
-#### Fossil vs. Clean Energy Impact on CO₂ Emissions
-To assess how national energy mixes influenced emissions over a 10-year window (2010–2020), a CTE was created with Window Ranking Functions (*ROW_NUMBER*) to compute a custom      Clean-to-Fossil Energy Ratio:   
+- **Fossil vs. Clean Energy Impact on CO₂ Emissions**
+  To assess how national energy mixes influenced emissions over a 10-year window (2010–2020), a CTE was created with Window Ranking Functions (*ROW_NUMBER*) to compute a custom      Clean-to-Fossil Energy Ratio:   
 
-```sql
-WITH avg_energy_co2 AS (
+  ```sql
+  WITH avg_energy_co2 AS (
     SELECT country, 
            ROUND(AVG(electricity_from_fossil_fuels_twh), 5) AS avg_electricity_from_fuels_twh,
            ROUND(AVG(electricity_from_renewables_twh + electricity_from_nuclear_twh), 5) AS avg_clean_electricity_twh,
@@ -134,22 +134,26 @@ WITH avg_energy_co2 AS (
     WHERE year BETWEEN 2010 AND 2020
     GROUP BY country
     HAVING AVG(co2_emissions_kt) IS NOT NULL
-)
-SELECT *,
+  )
+  SELECT *,
        CASE WHEN avg_electricity_from_fuels_twh = 0 THEN NULL
             ELSE ROUND(avg_clean_electricity_twh / avg_electricity_from_fuels_twh, 2)
        END AS clean_fuel_energy_ratio,
        ROW_NUMBER() OVER(ORDER BY avg_electricity_from_fuels_twh DESC) AS rank_fuel_electr,
        ROW_NUMBER() OVER(ORDER BY avg_clean_electricity_twh DESC) AS rank_clean_electr,
        ROW_NUMBER() OVER(ORDER BY avg_co2_emiss_kt DESC) AS rank_co2_emiss
-FROM avg_energy_co2
-WHERE avg_co2_emiss_kt IS NOT NULL AND avg_electricity_from_fuels_twh IS NOT NULL
-ORDER BY rank_co2_emiss
-LIMIT 15;
-```
+  FROM avg_energy_co2
+  WHERE avg_co2_emiss_kt IS NOT NULL AND avg_electricity_from_fuels_twh IS NOT NULL
+  ORDER BY rank_co2_emiss
+  LIMIT 15;
+  ```
 
-Key Results: Among the top 15 CO₂-emitting nations, 10 also rank in the global top 15 for fossil-fuel electricity generation, confirming a strong correlation between fossil energy reliance and emissions. The *clean_fuel_energy_ratio* metric effectively isolates the most virtuous countries transitioning toward nuclear and renewable sources.
-{: .blue-infobox}
+<p align="center">
+    <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/Q3.png" width="95%" style="border-radius: 4px;" alt="Grafico Q3" />
+  </p>
+  
+  Key Results: Among the top 15 CO₂-emitting nations, 10 also rank in the global top 15 for fossil-fuel electricity generation, confirming a strong correlation between fossil        energy reliance and emissions. The *clean_fuel_energy_ratio* metric effectively isolates the most virtuous countries transitioning toward nuclear and renewable sources.
+  {: .blue-infobox}
 
 
 ### 2. Demographic Aging: Developed vs. Developing Nations (Q10)
