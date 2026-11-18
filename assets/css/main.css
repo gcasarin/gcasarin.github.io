@@ -4288,3 +4288,16 @@
         margin-right: 4px
     }
 }
+
+
+/* Rende scorrevoli tutti i blocchi di codice su mobile */
+pre, code {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: pre;
+}
+
+pre code {
+  display: block;
+  word-wrap: normal;
+}
