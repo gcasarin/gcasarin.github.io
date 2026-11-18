@@ -100,6 +100,7 @@ The most insightful queries from each category are detailed below. For a deeper 
   
   To identify the primary contributors to global emissions, a Common Table Expression (CTE) was combined with a subquery to calculate each country's percentage share of total        worldwide CO₂ emissions in 2023:   
 
+  <div style="overflow-x: auto; max-width: 100%; border-radius: 4px; margin-bottom: 15px;">
   ```sql
   WITH co2 (country, co2_emissions, tot_co2) AS (
     SELECT country, 
