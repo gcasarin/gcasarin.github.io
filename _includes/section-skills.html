@@ -34,6 +34,10 @@
               fill="#432c7a"
               data-target="da"
             />
+
+            <!-- Foro centrale per effetto donut -->
+            <circle class="donut-hole" cx="110" cy="110" r="46" />
+  
           </svg>
         </div>
       </div>
@@ -151,7 +155,13 @@
   .skills-section .pie-slice.is-active {
     transform: scale(1.10);
   }
-
+  
+/* Colore del foro centrale: metti lo stesso colore dello sfondo della pagina */
+  .skills-section .donut-hole {
+    fill: #ffffff;
+    pointer-events: none;
+  }
+  
   .skills-section .pie-pillars {
     display: flex;
     flex-direction: column;
