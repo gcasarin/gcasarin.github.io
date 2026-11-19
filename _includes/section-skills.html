@@ -8,69 +8,142 @@
     </div>
 
     <div class="row mt-4">
-      <!-- Raccoglitore 1: Technical & Engineering Skills -->
-      <div class="col-lg-6 mb-4">
-        <div class="card p-4 h-100 shadow-sm border-0">
-          <div class="d-flex align-items-center mb-3">
-            <span class="mr-3" style="font-size: 2rem;">🛠️</span>
+      <!-- Raccoglitore verticale 1: Engineering & Project Management -->
+      <div class="col-md-6 mb-4">
+        <div class="skill-column skill-column--engineering h-100">
+          <div class="skill-column__header">
+            <span class="skill-column__icon" aria-hidden="true">🛠️</span>
             <div>
-              <h4 class="font-weight-bold mb-0">Engineering & Project Management</h4>
-              <small class="text-muted">Technical & organizational skills</small>
+              <h4 class="skill-column__title">Engineering & Project Management</h4>
+              <p class="skill-column__tag">Technical & organizational skills</p>
             </div>
           </div>
 
-          <p class="text-secondary small mb-3">
+          <p class="skill-column__desc">
             Structured problem solving, process mindset, and day-to-day coordination applied to technical and analytical work.
           </p>
 
-          <div class="d-flex flex-wrap" style="gap: 0.5rem;">
-            <span class="badge badge-pill badge-primary px-3 py-2">Mechanical Engineering</span>
-            <span class="badge badge-pill badge-primary px-3 py-2">Project Management</span>
-            <span class="badge badge-pill badge-light border px-3 py-2">Problem Solving</span>
-            <span class="badge badge-pill badge-light border px-3 py-2">Process Optimization</span>
-            <span class="badge badge-pill badge-light border px-3 py-2">Technical Documentation</span>
-            <span class="badge badge-pill badge-light border px-3 py-2">Stakeholder Alignment</span>
-          </div>
+          <ul class="skill-column__list">
+            <li><strong>Mechanical Engineering</strong></li>
+            <li><strong>Project Management</strong></li>
+            <li>Problem Solving</li>
+            <li>Process Optimization</li>
+            <li>Technical Documentation</li>
+            <li>Stakeholder Alignment</li>
+          </ul>
         </div>
       </div>
 
-      <!-- Raccoglitore 2: Data Analytics Skills -->
-      <div class="col-lg-6 mb-4">
-        <div class="card p-4 h-100 shadow-sm border-0">
-          <div class="d-flex align-items-center mb-3">
-            <span class="mr-3" style="font-size: 2rem;">📊</span>
+      <!-- Raccoglitore verticale 2: Data Analytics -->
+      <div class="col-md-6 mb-4">
+        <div class="skill-column skill-column--analytics h-100">
+          <div class="skill-column__header">
+            <span class="skill-column__icon" aria-hidden="true">📊</span>
             <div>
-              <h4 class="font-weight-bold mb-0">Data Analytics & Stack</h4>
-              <small class="text-muted">Core tools and analytical workflows</small>
+              <h4 class="skill-column__title">Data Analytics</h4>
+              <p class="skill-column__tag">Core tools & analytical workflows</p>
             </div>
           </div>
 
-          <p class="text-secondary small mb-3">
+          <p class="skill-column__desc">
             Tools and methods used to explore datasets, build dashboards, and turn raw information into clear decisions.
           </p>
 
-          <div class="mb-3">
-            <div class="small font-weight-bold text-uppercase text-muted mb-2">Core Stack</div>
-            <div class="d-flex flex-wrap" style="gap: 0.5rem;">
-              <span class="badge badge-pill badge-dark px-3 py-2">Excel</span>
-              <span class="badge badge-pill badge-dark px-3 py-2">SQL</span>
-              <span class="badge badge-pill badge-dark px-3 py-2">Python</span>
-              <span class="badge badge-pill badge-dark px-3 py-2">Tableau</span>
-            </div>
-          </div>
-
-          <div>
-            <div class="small font-weight-bold text-uppercase text-muted mb-2">Supporting Methods & Tools</div>
-            <div class="d-flex flex-wrap" style="gap: 0.5rem;">
-              <span class="badge badge-pill badge-light border px-3 py-2">Pandas & NumPy</span>
-              <span class="badge badge-pill badge-light border px-3 py-2">Exploratory Data Analysis (EDA)</span>
-              <span class="badge badge-pill badge-light border px-3 py-2">Data Cleaning & Wrangling</span>
-              <span class="badge badge-pill badge-light border px-3 py-2">Data Visualization</span>
-              <span class="badge badge-pill badge-light border px-3 py-2">Git & GitHub</span>
-            </div>
-          </div>
+          <ul class="skill-column__list">
+            <li><strong>Excel</strong></li>
+            <li><strong>SQL</strong></li>
+            <li><strong>Python</strong></li>
+            <li><strong>Tableau</strong></li>
+            <li>Exploratory Data Analysis (EDA)</li>
+            <li>Data Cleaning & Visualization</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .skills-section .skill-column {
+    border-radius: 18px;
+    padding: 2rem;
+    color: #ffffff;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.14);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skills-section .skill-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.22);
+  }
+
+  /* Colonna 1: Blu notte / petrolio (ispirazione ingegneristica e gestionale) */
+  .skills-section .skill-column--engineering {
+    background: linear-gradient(155deg, #16324f 0%, #1e4d6b 100%);
+    border-top: 5px solid #38bdf8;
+  }
+
+  /* Colonna 2: Viola profondo / indigo (ispirazione data & analytics) */
+  .skills-section .skill-column--analytics {
+    background: linear-gradient(155deg, #2b1e5a 0%, #432c7a 100%);
+    border-top: 5px solid #a78bfa;
+  }
+
+  .skills-section .skill-column__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .skills-section .skill-column__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.14);
+    font-size: 1.6rem;
+    flex-shrink: 0;
+  }
+
+  .skills-section .skill-column__title {
+    margin: 0;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .skills-section .skill-column__tag {
+    margin: 0.15rem 0 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .skills-section .skill-column__desc {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  }
+
+  .skills-section .skill-column__list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 1rem;
+    color: #ffffff;
+  }
+
+  .skills-section .skill-column__list li::marker {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1em;
+  }
+</style>
