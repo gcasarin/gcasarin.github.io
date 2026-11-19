@@ -2,60 +2,70 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <h2 class="section-title">My skills</h2>
+        <h2 class="section-title">My Core Skills</h2>
       </div>
     </div>
 
-    <div class="row mt-4 skills-row">
-      <!-- Raccoglitore verticale 1: Engineering & Project Management -->
-      <div class="col-md-6 skills-col">
-        <div class="skill-column skill-column--engineering h-100">
-          <div class="skill-column__header">
-            <span class="skill-column__icon" aria-hidden="true">🛠️</span>
-            <div>
-              <h4 class="skill-column__title">Engineering & Project Management</h4>
-              <p class="skill-column__tag">Technical & organizational skills</p>
-            </div>
-          </div>
-
-          <p class="skill-column__desc">
-            Structured problem solving, process mindset, and day-to-day coordination applied to technical and analytical work.
-          </p>
-
-          <ul class="skill-column__list">
-            <li><strong>Mechanical Engineering</strong></li>
-            <li><strong>Project Management</strong></li>
-            <li>Problem Solving</li>
-            <li>Process Optimization</li>
-            <li>Technical Documentation</li>
-            <li>Stakeholder Alignment</li>
-          </ul>
+    <div class="row mt-4 align-items-center pie-layout">
+      <!-- Grafico a torta (3 spicchi: 40% Engineering, 25% Project Management, 35% Data Analytics) -->
+      <div class="col-lg-5 mb-4 mb-lg-0 text-center">
+        <div class="pie-wrapper">
+          <svg class="skills-pie" viewBox="0 0 220 220" role="img" aria-label="Skills breakdown: Engineering, Project Management, and Data Analytics">
+            <!-- Spicchio 1: Engineering (40% -> 0° a 144°) -->
+            <path class="pie-slice" d="M 110 110 L 110 15 A 95 95 0 0 1 185.8 165.9 Z" fill="#1e4d6b" data-target="eng" />
+            <!-- Spicchio 2: Project Management (25% -> 144° a 234°) -->
+            <path class="pie-slice" d="M 110 110 L 185.8 165.9 A 95 95 0 0 1 33.2 139.3 Z" fill="#0d9488" data-target="pm" />
+            <!-- Spicchio 3: Data Analytics (35% -> 234° a 360°) -->
+            <path class="pie-slice" d="M 110 110 L 33.2 139.3 A 95 95 0 0 1 110 15 Z" fill="#432c7a" data-target="da" />
+          </svg>
         </div>
+        <p class="pie-hint">Click or hover a slice to highlight</p>
       </div>
 
-      <!-- Raccoglitore verticale 2: Data Analytics -->
-      <div class="col-md-6 skills-col">
-        <div class="skill-column skill-column--analytics h-100">
-          <div class="skill-column__header">
-            <span class="skill-column__icon" aria-hidden="true">📊</span>
-            <div>
-              <h4 class="skill-column__title">Data Analytics</h4>
-              <p class="skill-column__tag">Core tools & analytical workflows</p>
+      <!-- Dettaglio skill dei 3 spicchi -->
+      <div class="col-lg-7">
+        <div class="pie-pillars">
+          <!-- 1. Engineering -->
+          <div class="pie-pillar pie-pillar--eng" data-slice="eng">
+            <div class="pie-pillar__head">
+              <span class="pie-dot" style="background: #1e4d6b;"></span>
+              <h4 class="pie-pillar__title">Engineering</h4>
+              <span class="pie-share">40%</span>
             </div>
+            <ul class="pie-pillar__list">
+              <li><strong>Mechanical Engineering</strong></li>
+              <li>Problem Solving & Root Cause Analysis</li>
+              <li>Process Optimization & Technical Documentation</li>
+            </ul>
           </div>
 
-          <p class="skill-column__desc">
-            Tools and methods used to explore datasets, build dashboards, and turn raw information into clear decisions.
-          </p>
+          <!-- 2. Project Management -->
+          <div class="pie-pillar pie-pillar--pm" data-slice="pm">
+            <div class="pie-pillar__head">
+              <span class="pie-dot" style="background: #0d9488;"></span>
+              <h4 class="pie-pillar__title">Project Management</h4>
+              <span class="pie-share">25%</span>
+            </div>
+            <ul class="pie-pillar__list">
+              <li><strong>Project Management</strong> & Planning</li>
+              <li>Stakeholder Alignment & Prioritization</li>
+              <li>Workflow Organization & Delivery</li>
+            </ul>
+          </div>
 
-          <ul class="skill-column__list">
-            <li><strong>Excel</strong></li>
-            <li><strong>SQL</strong></li>
-            <li><strong>Python</strong></li>
-            <li><strong>Tableau</strong></li>
-            <li>Exploratory Data Analysis (EDA)</li>
-            <li>Data Cleaning & Visualization</li>
-          </ul>
+          <!-- 3. Data Analytics -->
+          <div class="pie-pillar pie-pillar--da" data-slice="da">
+            <div class="pie-pillar__head">
+              <span class="pie-dot" style="background: #432c7a;"></span>
+              <h4 class="pie-pillar__title">Data Analytics</h4>
+              <span class="pie-share">35%</span>
+            </div>
+            <ul class="pie-pillar__list">
+              <li><strong>Excel</strong>, <strong>SQL</strong>, <strong>Python</strong> & <strong>Tableau</strong></li>
+              <li>Exploratory Data Analysis (EDA) & Data Cleaning</li>
+              <li>Dashboards & Data Visualization</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -63,99 +73,124 @@
 </section>
 
 <style>
-  .skills-section .skills-row {
+  .skills-section .pie-wrapper {
+    max-width: 310px;
+    margin: 0 auto;
+    filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.14));
+  }
+
+  .skills-section .skills-pie {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .skills-section .pie-slice {
+    stroke: #ffffff;
+    stroke-width: 2.5;
+    cursor: pointer;
+    transform-origin: 110px 110px;
+    transition: transform 0.22s ease, opacity 0.22s ease;
+  }
+
+  .skills-section .pie-slice:hover,
+  .skills-section .pie-slice.is-active {
+    transform: scale(1.04);
+  }
+
+  .skills-section .pie-hint {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: #64748b;
+  }
+
+  .skills-section .pie-pillars {
     display: flex;
-    flex-wrap: wrap;
-    margin-left: -1.25rem;
-    margin-right: -1.25rem;
-    row-gap: 2rem;
-  }
-
-  .skills-section .skills-col {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .skills-section .skill-column {
-    border-radius: 18px;
-    padding: 2rem;
-    color: #ffffff;
-    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.14);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .skills-section .skill-column:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.22);
-  }
-
-  /* Colonna 1: Blu notte / petrolio */
-  .skills-section .skill-column--engineering {
-    background: linear-gradient(155deg, #16324f 0%, #1e4d6b 100%);
-    border-top: 5px solid #38bdf8;
-  }
-
-  /* Colonna 2: Viola profondo / indigo */
-  .skills-section .skill-column--analytics {
-    background: linear-gradient(155deg, #2b1e5a 0%, #432c7a 100%);
-    border-top: 5px solid #a78bfa;
-  }
-
-  .skills-section .skill-column__header {
-    display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 1rem;
-    margin-bottom: 1rem;
   }
 
-  .skills-section .skill-column__icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
+  .skills-section .pie-pillar {
+    background: #ffffff;
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.14);
-    font-size: 1.6rem;
+    padding: 1.1rem 1.35rem;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    border-left: 5px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .skills-section .pie-pillar--eng { border-left-color: #1e4d6b; }
+  .skills-section .pie-pillar--pm  { border-left-color: #0d9488; }
+  .skills-section .pie-pillar--da  { border-left-color: #432c7a; }
+
+  .skills-section .pie-pillar.is-active {
+    transform: translateX(4px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+  }
+
+  .skills-section .pie-pillar__head {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .skills-section .pie-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
     flex-shrink: 0;
   }
 
-  .skills-section .skill-column__title {
+  .skills-section .pie-pillar__title {
     margin: 0;
     font-weight: 700;
-    color: #ffffff;
+    font-size: 1.05rem;
   }
 
-  .skills-section .skill-column__tag {
-    margin: 0.15rem 0 0;
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.78);
+  .skills-section .pie-share {
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #475569;
   }
 
-  .skills-section .skill-column__desc {
-    font-size: 0.95rem;
-    line-height: 1.55;
-    color: rgba(255, 255, 255, 0.88);
-    margin-bottom: 1.25rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-  }
-
-  .skills-section .skill-column__list {
-    list-style: disc;
-    padding-left: 1.25rem;
+  .skills-section .pie-pillar__list {
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    font-size: 1rem;
-    color: #ffffff;
+    padding-left: 1.2rem;
+    font-size: 0.92rem;
+    color: #334155;
   }
 
-  .skills-section .skill-column__list li::marker {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 1.1em;
+  .skills-section .pie-pillar__list li {
+    margin-bottom: 0.2rem;
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slices = document.querySelectorAll(".skills-section .pie-slice");
+    const pillars = document.querySelectorAll(".skills-section .pie-pillar");
+
+    function setHighlight(key) {
+      slices.forEach((s) => s.classList.toggle("is-active", s.dataset.target === key));
+      pillars.forEach((p) => p.classList.toggle("is-active", p.dataset.slice === key));
+    }
+
+    function clearHighlight() {
+      slices.forEach((s) => s.classList.remove("is-active"));
+      pillars.forEach((p) => p.classList.remove("is-active"));
+    }
+
+    slices.forEach((slice) => {
+      slice.addEventListener("mouseenter", () => setHighlight(slice.dataset.target));
+      slice.addEventListener("mouseleave", clearHighlight);
+      slice.addEventListener("click", () => setHighlight(slice.dataset.target));
+    });
+
+    pillars.forEach((pillar) => {
+      pillar.addEventListener("mouseenter", () => setHighlight(pillar.dataset.slice));
+      pillar.addEventListener("mouseleave", clearHighlight);
+    });
+  });
+</script>
