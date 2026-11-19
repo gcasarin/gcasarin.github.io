@@ -1,14 +1,14 @@
 <section class="section skills-section" id="skills">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-right text-end">
+    <div class="row skills-header-row">
+      <div class="col-md-12 skills-title-col">
         <h2 class="section-title">My skills</h2>
       </div>
     </div>
 
-    <div class="row mt-4 align-items-stretch pie-layout">
+    <div class="row mt-4 pie-layout">
       <!-- Colonna sinistra: grafico a torta centrato orizzontalmente e verticalmente -->
-      <div class="col-lg-5 mb-4 mb-lg-0 d-flex justify-content-center align-items-center">
+      <div class="col-lg-5 mb-4 mb-lg-0 pie-col">
         <div class="pie-wrapper">
           <svg class="skills-pie" viewBox="0 0 220 220" width="280" height="280" role="img" aria-label="Skills breakdown: Engineering, Project Management, and Data Analytics">
             <!-- Fetta 1: Engineering (120°) -->
@@ -39,7 +39,7 @@
       </div>
 
       <!-- Colonna destra: dettaglio skill dei 3 spicchi -->
-      <div class="col-lg-7">
+      <div class="col-lg-7 pillars-col">
         <div class="pie-pillars">
           <!-- 1. Engineering -->
           <div class="pie-pillar pie-pillar--eng" data-slice="eng">
@@ -86,6 +86,39 @@
 </section>
 
 <style>
+  /* Titolo allineato a destra a prescindere dal tema */
+  .skills-section .skills-header-row {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .skills-section .skills-title-col {
+    width: 100%;
+    margin-left: auto;
+    text-align: right !important;
+  }
+
+  .skills-section .section-title {
+    display: block;
+    width: 100%;
+    text-align: right !important;
+    margin-left: auto;
+  }
+
+  /* Layout a due colonne con centratura verticale della pie chart */
+  @media (min-width: 992px) {
+    .skills-section .pie-layout {
+      display: flex !important;
+      align-items: center !important;
+    }
+  }
+
+  .skills-section .pie-col {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
   .skills-section .pie-wrapper {
     width: 280px;
     height: 280px;
@@ -93,6 +126,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
     filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.14));
   }
 
