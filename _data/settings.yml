@@ -2,12 +2,12 @@
 title: GC
 #logo_image: ""
 description: "Gabriele Casarin Portfolio"
-social_media_share_image: "/images/author.jpg"
+social_media_share_image: "/images/cover_image_portfolio.jpeg"
 google-analytics: "G-XLEGE1T4XZ"
 
 # Author Settings
 author_name: "Gabriele Casarin"
-author_image: "/images/foto_profilo_casual.JPEG"
+author_image: "/images/cover_image_portfolio.jpeg"
 
 # Header Menu
 header_menu__settings:
@@ -37,7 +37,7 @@ footer_menu__settings:
 hero__settings:
   title: "Hi, I'm Gabriele Casarin"
   description_html: "<strong>Data Analyst</strong> passionate about turning complex datasets into clear, actionable insights using Python, SQL, and interactive dashboards."
-  image: "/images/foto_profilo_casual.JPEG"
+  image: "/images/cover_image_portfolio.jpeg"
   image_alt: "Gabriele Casarin's picture"
   cta_button: "Get in touch"
   cta_button_link: "/contact"
