@@ -36,7 +36,7 @@ footer_menu__settings:
 # Hero settings
 hero__settings:
   title: "Hi, I'm Gabriele Casarin"
-  description_html: "I'm a <strong>mechanical engineer</strong> with a passion for <strong>data analysis</strong>. Without realizing it, I've been doing data analysis for a long time: at university for projects and my thesis, and at work to <strong>solve problems</strong> and <strong>make better decisions</strong>. Over the last few years, I've put a clear name to it and started studying and practicing it in a more structured way, digging deeper into tools like <strong>Excel</strong>, <strong>SQL</strong>, <strong>Python</strong>, and <strong>Tableau</strong>. On this site, I collect <strong>personal projects</strong> built out of study and curiosity. Take a look around and reach out via email or LinkedIn to <strong>connect</strong>!"
+  description_html: "I'm a <strong>mechanical engineer</strong> with a passion for <strong>data analysis</strong>! I've long worked with data — across my thesis, projects, and daily decisions — before even giving it a name. In the last years, I've turned that into a more structured practice using <strong>Excel</strong>, <strong>SQL</strong>, <strong>Python</strong>, and <strong>Tableau</strong>. Here I share <strong/>projects</strong> born out of study and curiosity — take a look and reach out via email or LinkedIn to <strong>connect</strong>!"
   image: "/images/cover_image_portfolio.jpeg"
   image_alt: "Gabriele Casarin's picture"
   cta_button: "Get in touch"
