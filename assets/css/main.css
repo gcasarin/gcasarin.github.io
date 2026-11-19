@@ -4301,3 +4301,15 @@ pre code {
   display: block;
   word-wrap: normal;
 }
+
+/* Riduzione spazi tra le sezioni della home */
+section,
+.section {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+/* Riduce lo spazio extra prima del footer */
+.footer {
+    margin-top: 24px;
+}
