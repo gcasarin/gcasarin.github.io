@@ -46,7 +46,7 @@ hero__settings:
 
 # Projects settings
 projects__settings:
-  title: "Featured Works"
+  title: "My Projects"
   title_myworks: "My Projects"
   description_html: "Explore my latest data analysis projects, dashboards, and machine learning models."
   link_url: "/projects"
@@ -63,10 +63,10 @@ testimonials__description_html: ""
 testimonials: []
 
 newsletter__settings:
-  newsletter_title: "Join my mailing list"
-  newsletter_description: "Get inspiration, updates and cool stuff!"
+  newsletter_title: ""
+  newsletter_description: ""
   newsletter_identifier: ""
-  newsletter_button: "Subscribe"
+  newsletter_button: ""
 
 contact_form__settings:
   form_title: "Let's Connect"
