@@ -1789,9 +1789,20 @@
     }
 
     .logo__image {
-        max-height: 200px
+        max-height: 160px;
     }
-
+    
+    @media only screen and (max-width: 768px) {
+        .logo__image {
+            max-height: 80px;
+        }
+    }
+    
+    @media only screen and (max-width: 576px) {
+        .logo__image {
+            max-height: 64px;
+        }
+    }
     .main-nav {
         display: flex;
         align-items: center;
