@@ -68,11 +68,11 @@ projects__settings:
 #  newsletter_identifier: ""
 #  newsletter_button: ""
 
-#contact_form__settings:
-#  form_title: "Let's Connect"
-#  form_description: "Have a project in mind or want to discuss data opportunities? Drop me a message!"
-#  form_button_text: "Send Message"
-#  form_action_url: "https://formspree.io/f/tuo-form-id"
+contact_form__settings:
+  form_title: "Let's Connect"
+  form_description: "Have a project in mind or want to discuss data opportunities? Drop me a message!"
+  form_button_text: "Send Message"
+  form_action_url: "https://formspree.io/f/tuo-form-id"
 
 # Social Links
 social_links:
