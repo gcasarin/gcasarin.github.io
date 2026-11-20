@@ -3279,19 +3279,19 @@
 
 @media only screen and (max-width: 1024px) {
     .c-hero {
-        padding: 40px 0 28px
+        padding: 40px 0 32px
     }
 }
 
 @media only screen and (max-width: 768px) {
     .c-hero {
-        padding: 32px 0 28px
+        padding: 32px 0 32px
     }
 }
 
 @media only screen and (max-width: 576px) {
     .c-hero {
-        padding: 24px 0 
+        padding: 24px 0 24px
     }
 }
 
@@ -4305,7 +4305,7 @@ pre code {
 /* Riduzione spazi tra le sezioni della home */
 section,
 .section {
-    padding-top: 24px;
+    padding-top: 32px;
     padding-bottom: 24px;
 }
 
