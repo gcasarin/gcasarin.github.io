@@ -36,7 +36,7 @@ footer_menu__settings:
 # Hero settings
 hero__settings:
   title: "Hi, I'm Gabriele Casarin"
-  description_html: "I'm a <strong>mechanical engineer</strong> with a passion for <strong>data analysis</strong>! I've been working with data since my university studies and my day-to-day work as an engineer — before even giving it a name. In the last years, I've turned that into a more structured practice using <strong>Excel</strong>, <strong>SQL</strong>, <strong>Python</strong>, and <strong>Tableau</strong>, and I'm now experimenting with <strong>AI</strong> with great enthusiasm. Here I share <strong/>projects</strong> born out of study and curiosity — take a look and reach out via email or LinkedIn to <strong>connect</strong>!"
+  description_html: "I'm a <strong>mechanical engineer</strong> with a passion for <strong>data analysis</strong>! I've been working with data since my university studies and my day-to-day work as an engineer — before even giving it a name. In the last years, I've turned that into a more structured practice using <strong>Excel</strong>, <strong>SQL</strong>, <strong>Python</strong>, and <strong>Tableau</strong>, and I'm now experimenting with <strong>AI</strong> with great enthusiasm. Here I share <strong/>my projects</strong> born out of study and curiosity — take a look and reach out via email or LinkedIn to <strong>connect</strong>!"
   image: "/images/cover_image_portfolio.jpeg"
   image_alt: "Gabriele Casarin's picture"
   cta_button: "Get in touch"
@@ -50,23 +50,6 @@ projects__settings:
   title_myworks: "My Projects"
   description_html: "Explore my latest data analysis projects, dashboards, and machine learning models."
   link_url: "/projects"
-
-# Sezioni aggiuntive lasciate vuote per evitare errori di "undefined" nel template
-#blog__settings:
-#  title: ""
-#  title_blog: ""
-#  description_html: ""
-#  link_url: ""
-
-#testimonials__title: ""
-#testimonials__description_html: ""
-#testimonials: []
-
-#newsletter__settings:
-#  newsletter_title: ""
-#  newsletter_description: ""
-#  newsletter_identifier: ""
-#  newsletter_button: ""
 
 contact_form__settings:
   form_title: "Let's Connect"
