@@ -52,27 +52,27 @@ projects__settings:
   link_url: "/projects"
 
 # Sezioni aggiuntive lasciate vuote per evitare errori di "undefined" nel template
-blog__settings:
-  title: ""
-  title_blog: ""
-  description_html: ""
-  link_url: ""
+#blog__settings:
+#  title: ""
+#  title_blog: ""
+#  description_html: ""
+#  link_url: ""
 
-testimonials__title: ""
-testimonials__description_html: ""
-testimonials: []
+#testimonials__title: ""
+#testimonials__description_html: ""
+#testimonials: []
 
-newsletter__settings:
-  newsletter_title: ""
-  newsletter_description: ""
-  newsletter_identifier: ""
-  newsletter_button: ""
+#newsletter__settings:
+#  newsletter_title: ""
+#  newsletter_description: ""
+#  newsletter_identifier: ""
+#  newsletter_button: ""
 
-contact_form__settings:
-  form_title: "Let's Connect"
-  form_description: "Have a project in mind or want to discuss data opportunities? Drop me a message!"
-  form_button_text: "Send Message"
-  form_action_url: "https://formspree.io/f/tuo-form-id"
+#contact_form__settings:
+#  form_title: "Let's Connect"
+#  form_description: "Have a project in mind or want to discuss data opportunities? Drop me a message!"
+#  form_button_text: "Send Message"
+#  form_action_url: "https://formspree.io/f/tuo-form-id"
 
 # Social Links
 social_links:
