@@ -7,7 +7,7 @@
     </div>
 
     <div class="row mt-4 pie-layout">
-      <!-- Colonna sinistra: donut chart ruotata di 45° -->
+      <!-- Colonna sinistra: donut chart ruotata di -90° -->
       <div class="col-lg-5 mb-4 mb-lg-0 pie-col">
         <div class="pie-wrapper">
           <svg class="skills-pie" viewBox="0 0 220 220" width="280" height="280" role="img" aria-label="Skills breakdown: Data Analytics, Engineering, Project Management, and Interpersonal Skills">
@@ -16,7 +16,7 @@
               <path
                 class="pie-slice"
                 d="M 110 110 L 110 14 A 96 96 0 0 1 206 110 Z"
-                fill="#7e22ce"
+                fill="#8d04bf"
                 data-target="da"
               />
 
@@ -24,7 +24,7 @@
               <path
                 class="pie-slice"
                 d="M 110 110 L 206 110 A 96 96 0 0 1 110 206 Z"
-                fill="#0284c7"
+                fill="#02dee6"
                 data-target="eng"
               />
 
@@ -32,7 +32,7 @@
               <path
                 class="pie-slice"
                 d="M 110 110 L 110 206 A 96 96 0 0 1 14 110 Z"
-                fill="#15803d"
+                fill="#038203"
                 data-target="pm"
               />
 
@@ -40,7 +40,7 @@
               <path
                 class="pie-slice"
                 d="M 110 110 L 14 110 A 96 96 0 0 1 110 14 Z"
-                fill="#ea580c"
+                fill="#e86202"
                 data-target="is"
               />
             </g>
@@ -58,7 +58,7 @@
           <!-- 1. Data Analytics -->
           <div class="pie-pillar pie-pillar--da" data-slice="da">
             <div class="pie-pillar__head">
-              <span class="pie-dot" style="background: #7e22ce;"></span>
+              <span class="pie-dot" style="background: #8d04bf;"></span>
               <h4 class="pie-pillar__title">Data Analytics &amp; ML</h4>
             </div>
             <ul class="pie-pillar__list">
@@ -72,7 +72,7 @@
           <!-- 2. Engineering -->
           <div class="pie-pillar pie-pillar--eng" data-slice="eng">
             <div class="pie-pillar__head">
-              <span class="pie-dot" style="background: #0284c7;"></span>
+              <span class="pie-dot" style="background: #02dee6;"></span>
               <h4 class="pie-pillar__title">Engineering</h4>
             </div>
             <ul class="pie-pillar__list">
@@ -83,7 +83,7 @@
           <!-- 3. Project Management -->
           <div class="pie-pillar pie-pillar--pm" data-slice="pm">
             <div class="pie-pillar__head">
-              <span class="pie-dot" style="background: #15803d;"></span>
+              <span class="pie-dot" style="background: #038203;"></span>
               <h4 class="pie-pillar__title">Project Management</h4>
             </div>
             <ul class="pie-pillar__list">
@@ -94,7 +94,7 @@
           <!-- 4. Interpersonal Skills -->
           <div class="pie-pillar pie-pillar--is" data-slice="is">
             <div class="pie-pillar__head">
-              <span class="pie-dot" style="background: #ea580c;"></span>
+              <span class="pie-dot" style="background: #e86202;"></span>
               <h4 class="pie-pillar__title">Interpersonal Skills</h4>
             </div>
             <ul class="pie-pillar__list">
@@ -165,7 +165,7 @@
 
   .skills-section .pie-slice {
     stroke: #e9e9e9;
-    stroke-width: 5;
+    stroke-width: 3;
     stroke-linejoin: round;
     cursor: pointer;
     transform-origin: 110px 110px;
@@ -177,7 +177,7 @@
     transform: scale(1.10);
   }
 
-  /* Colore del foro centrale: metti lo stesso colore dello sfondo della pagina */
+  /* Colore del foro centrale allineato allo sfondo della pagina */
   .skills-section .donut-hole {
     fill: #e9e9e9;
     pointer-events: none;
@@ -200,10 +200,10 @@
                 background-color 0.24s ease;
   }
 
-  .skills-section .pie-pillar--da  { border-left-color: #7e22ce; }
-  .skills-section .pie-pillar--eng { border-left-color: #0284c7; }
-  .skills-section .pie-pillar--pm  { border-left-color: #15803d; }
-  .skills-section .pie-pillar--is  { border-left-color: #ea580c; }
+  .skills-section .pie-pillar--da  { border-left-color: #8d04bf; }
+  .skills-section .pie-pillar--eng { border-left-color: #02dee6; }
+  .skills-section .pie-pillar--pm  { border-left-color: #038203; }
+  .skills-section .pie-pillar--is  { border-left-color: #e86202; }
 
   .skills-section .pie-pillar.is-active {
     transform: translateX(12px) scale(1.02);
@@ -211,19 +211,19 @@
   }
 
   .skills-section .pie-pillar--da.is-active {
-    background-color: rgba(126, 34, 206, 0.08);
+    background-color: rgba(141, 4, 191, 0.08);
   }
 
   .skills-section .pie-pillar--eng.is-active {
-    background-color: rgba(2, 132, 199, 0.08);
+    background-color: rgba(2, 222, 230, 0.10);
   }
 
   .skills-section .pie-pillar--pm.is-active {
-    background-color: rgba(21, 128, 61, 0.08);
+    background-color: rgba(3, 130, 3, 0.08);
   }
 
   .skills-section .pie-pillar--is.is-active {
-    background-color: rgba(234, 88, 12, 0.08);
+    background-color: rgba(232, 98, 2, 0.08);
   }
 
   .skills-section .pie-pillar__head {
