@@ -49,6 +49,22 @@ The analysis integrates three distinct datasets covering 2023 snapshots alongsid
 
 ```sql
 -- Example of relational schema definition & constraint enforcement
+
+CREATE TABLE IF NOT EXISTS general_info_2023 (
+	  country_id	INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
+    country VARCHAR(255),
+    capital_major_city VARCHAR(255),
+    land_area_km2 BIGINT,
+    agricultural_land_percent DECIMAL(5, 2),
+    forested_area_percent DECIMAL(5, 2),
+    official_language VARCHAR(255),
+    co2_emissions BIGINT,
+    calling_code VARCHAR(10),
+    latitude VARCHAR(16),
+    longitude VARCHAR(16)
+);
+ALTER TABLE general_info ADD CONSTRAINT unique_gen_info_country UNIQUE (country);
+
 CREATE TABLE healthcare_2023 (
     country VARCHAR(255) PRIMARY KEY,
     infant_mortality DECIMAL(5, 2),
@@ -59,6 +75,11 @@ CREATE TABLE healthcare_2023 (
     CONSTRAINT fk_healthcare FOREIGN KEY (country) REFERENCES general_info_2023(country)
 );
 ```
+
+<figure style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/general_info_schema.jpg" alt="Global Country Information (2023) dataset schema" style="max-width: 700px; width: 100%; height: auto;">
+  <figcaption style="margin-top: 12px; font-size: 14px; color: #110e38;">'Global Country Information (2023)' dataset schema</figcaption>
+</figure>
 
 ---
 
