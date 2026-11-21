@@ -1789,7 +1789,7 @@
     }
 
     .logo__image {
-        max-height: 70px;
+        max-height: 80px;
     }
     
     @media only screen and (max-width: 768px) {
