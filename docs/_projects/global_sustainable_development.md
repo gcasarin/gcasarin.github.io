@@ -48,7 +48,7 @@ The analysis integrates three distinct datasets covering 2023 snapshots alongsid
 - **Global Missing Migrants Dataset (2014–2023):** Stored in `migration_incidents_14_23`, detailing casualties, demographic breakdowns, and incident locations.
 
 ```sql
--- Example of relational schema definition & constraint enforcement
+-- Code block extract of relational schema definition
 
 CREATE TABLE IF NOT EXISTS general_info_2023 (
 	  country_id	INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
@@ -78,7 +78,7 @@ CREATE TABLE healthcare_2023 (
 
 <figure style="text-align: center;">
   <img src="https://raw.githubusercontent.com/gcasarin/SQLProject-Global-sustainable-development/main/Charts/general_info_schema.jpg" alt="Global Country Information (2023) dataset schema" style="max-width: 900px; width: 100%; height: auto;">
-  <figcaption style="margin-top: 12px; font-size: 14px; color: #110e38;">*'Global Country Information (2023)' dataset schema*</figcaption>
+  <figcaption style="margin-top: 12px; font-size: 14px; color: #110e38;">'Global Country Information (2023)' dataset schema and SQL script example</figcaption>
 </figure>
 
 ---
