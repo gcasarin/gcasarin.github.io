@@ -50,94 +50,49 @@ layout: default
     </article>
   </div>
 
-  <!-- ALTRI PROGETTI CON FOTO -->
+  <!-- ALTRI PROGETTI (STESSO STILE DELLA SEZIONE PROJECTS) -->
   {% assign other_projects = site.projects | where_exp: "item", "item.url != page.url" %}
   {% if other_projects.size > 0 %}
-  <section class="related-projects mt-5 pt-5 border-top animate">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2 class="h4 font-weight-bold m-0">Other Projects</h2>
-      {% if page.previous.url %}
-        <a href="{{ site.baseurl }}{{ page.previous.url }}" class="small font-weight-bold">
-          Next Project <i class="ion ion-md-arrow-round-forward arrow-right"></i>
-        </a>
-      {% endif %}
-    </div>
+  <section class="section projects mt-5 pt-4 border-top" id="related-projects">
+    <div class="row">
+      <div class="col col-12">
+        <div class="container__inner animate">
 
-    <div class="related-projects__grid">
-      {% for proj in other_projects limit:3 %}
-        <a href="{{ site.baseurl }}{{ proj.url }}" class="related-project-card">
-          {% if proj.image %}
-            <div class="related-project-card__thumb">
-              <img src="{{ site.baseurl }}{{ proj.image }}" alt="{{ proj.title }}" loading="lazy">
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">Other Projects</h2>
+              <a class="section__link" href="{{ site.baseurl }}{{ site.data.settings.projects__settings.link_url | default: '/projects/' }}">View all <i class="ion ion-md-arrow-forward"></i></a>
             </div>
-          {% endif %}
-          <div class="related-project-card__body">
-            <h3 class="related-project-card__title">{{ proj.title }}</h3>
-            {% if proj.subtitle %}
-              <p class="related-project-card__subtitle">{{ proj.subtitle }}</p>
-            {% endif %}
           </div>
-        </a>
-      {% endfor %}
+
+          <div class="row">
+            {% for project in other_projects limit:3 %}
+              <!-- begin individual project card -->
+              <article class="c-project-card col col-4 col-d-6 col-t-12">
+                <div class="c-project-card__content">
+                  <a href="{{ site.baseurl }}{{ project.url | default: '#' }}" class="c-project-card__image" aria-label="View project: {{ project.title }}">
+                    <img loading="lazy" src="{{ site.baseurl }}{{ project.image }}" alt="{{ project.title }}">
+                  </a>
+                  <div class="c-project-card__info">
+                    <div class="c-project-card__info-wrap">
+                      <h3 class="c-project-card__title">{{ project.title }}</h3>
+                    </div>
+                    <div class="c-project-card__info-wrap">
+                      {% if project.subtitle %}
+                        <div class="c-project-card__subtitle">{{ project.subtitle }}</div>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!-- end individual project card -->
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
     </div>
   </section>
   {% endif %}
 
 </div>
-
-<style>
-  .related-projects__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 24px;
-  }
-
-  .related-project-card {
-    display: flex;
-    flex-direction: column;
-    background: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
-    transition: transform 0.22s ease, box-shadow 0.22s ease;
-  }
-
-  .related-project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.14);
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .related-project-card__thumb {
-    width: 100%;
-    height: 160px;
-    overflow: hidden;
-    background: #f1f5f9;
-  }
-
-  .related-project-card__thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .related-project-card__body {
-    padding: 16px 18px;
-  }
-
-  .related-project-card__title {
-    font-size: 1.05rem;
-    font-weight: 700;
-    margin: 0 0 6px 0;
-  }
-
-  .related-project-card__subtitle {
-    font-size: 0.88rem;
-    color: #475569;
-    margin: 0;
-  }
-</style>
