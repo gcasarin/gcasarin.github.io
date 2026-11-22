@@ -8,11 +8,12 @@ layout: default
     </div>
 </div>
 
+{% if page.image and page.image != "" %}
 <div class="container">
     <div class="row">
         <div class="col col-12">
             <div class="c-page-image animate">
-                <img alt="{{ page.image-alt }}" 
+                <img alt="{{ page.image-alt | default: page.title }}" 
                      data-cms-original-src="{{ page.image }}" 
                      loading="lazy" 
                      src="{{ site.baseurl }}{{ page.image }}">
@@ -20,6 +21,7 @@ layout: default
         </div>
     </div>
 </div>
+{% endif %}
 
 <div class="container animate">
     <article class="post">
