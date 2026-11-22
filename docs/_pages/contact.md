@@ -1,8 +1,9 @@
 ---
 layout: page
-title:  Contact
-description: Connect with me
+title:  Let's Connect!
+description: Connect with me on Linkedin or drop me a message
 date:   2026-11-22 15:01:35 +0300
+image: ''
 ---
 
 <!-- begin linkedin connect split section -->
