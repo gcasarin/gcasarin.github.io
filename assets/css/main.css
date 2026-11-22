@@ -4382,12 +4382,14 @@ section,
 /* Pulsante Linkedin contact form */
 .c-contact-form__linkedin-box {
   margin-top: 28px;
+  text-align: center;
 }
 
 .c-contact-form__linkedin-text {
   margin: 0 0 12px 0;
   font-size: 0.95rem;
   color: #475569;
+  text-align: center;
 }
 
 .c-contact-form__linkedin-btn {
