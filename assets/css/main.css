@@ -4325,14 +4325,16 @@ section,
     margin-top: 24px;
 }
 
-/* Riduzione leggera del titolo dell'hero */
-.c-hero__title {
-  font-size: clamp(1.75rem, 3.2vw, 3rem);
-  line-height: 1.2;
+:root {
+  /* Regola la dimensione per tutti i titoli di sezione */
+  --section-title-size: clamp(1.75rem, 3.2vw, 3rem);
 }
 
-/* Riduzione leggera del titolo del contact form */
+/* Applica la stessa dimensione a tutte le sezioni */
+.projects .section__title,
+.skills-section .section-title,
+.c-hero__title,
 .c-contact-form__contact-title {
-  font-size: clamp(1.75rem, 3.2vw, 3rem);
+  font-size: var(--section-title-size) !important;
   line-height: 1.2;
 }
