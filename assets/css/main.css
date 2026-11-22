@@ -4326,15 +4326,55 @@ section,
 }
 
 :root {
-  /* Regola la dimensione per tutti i titoli di sezione */
-  --section-title-size: clamp(1.75rem, 3.2vw, 3rem);
+  /* Regolazioni separate DESKTOP */
+  --hero-title-size: 2.75rem;
+  --projects-title-size: 2.25rem;
+  --skills-title-size: 2.25rem;
+  --contact-title-size: 3rem;
+
+  /* Regolazioni separate MOBILE (sotto i 768px) */
+  --hero-title-size-mobile: 1.85rem;
+  --projects-title-size-mobile: 1.6rem;
+  --skills-title-size-mobile: 1.6rem;
+  --contact-title-size-mobile: 2rem;
 }
 
-/* Applica la stessa dimensione a tutte le sezioni */
-.projects .section__title,
-.skills-section .section-title,
-.c-hero__title,
-.c-contact-form__contact-title {
-  font-size: var(--section-title-size) !important;
+/* Applicazione desktop */
+.c-hero__title {
+  font-size: var(--hero-title-size) !important;
+  line-height: 1.15;
+}
+
+.projects .section__title {
+  font-size: var(--projects-title-size) !important;
   line-height: 1.2;
+}
+
+.skills-section .section-title {
+  font-size: var(--skills-title-size) !important;
+  line-height: 1.2;
+}
+
+.c-contact-form__contact-title {
+  font-size: var(--contact-title-size) !important;
+  line-height: 1.2;
+}
+
+/* Override per versione mobile */
+@media (max-width: 767px) {
+  .c-hero__title {
+    font-size: var(--hero-title-size-mobile) !important;
+  }
+
+  .projects .section__title {
+    font-size: var(--projects-title-size-mobile) !important;
+  }
+
+  .skills-section .section-title {
+    font-size: var(--skills-title-size-mobile) !important;
+  }
+
+  .c-contact-form__contact-title {
+    font-size: var(--contact-title-size-mobile) !important;
+  }
 }
