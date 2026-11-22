@@ -4412,3 +4412,38 @@ section,
   text-decoration: none;
   transform: translateY(-1px);
 }
+
+
+/* Gestione pagina Contact */
+.contact-linkedin-split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 40px;
+}
+
+.contact-linkedin-split__left {
+  flex: 1 1 320px;
+}
+
+.contact-linkedin-split__text {
+  margin: 14px 0 24px 0;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.contact-linkedin-split__right {
+  flex: 1 1 320px;
+  text-align: center;
+}
+
+.contact-linkedin-split__image img {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+}
