@@ -11,12 +11,35 @@
       <div class="col-lg-5 mb-4 mb-lg-0 pie-col">
         <div class="pie-wrapper">
           <svg class="skills-pie" viewBox="0 0 220 220" width="280" height="280" role="img" aria-label="Skills breakdown: Data Analytics, Engineering, Project Management, and Interpersonal Skills">
+            <defs>
+              <!-- Gradiente radiale dall'esterno (100%) verso l'interno (0%) -->
+              <radialGradient id="grad-da" cx="110" cy="110" r="110" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#4c1d95" />
+                <stop offset="100%" stop-color="#8c52ff" />
+              </radialGradient>
+
+              <radialGradient id="grad-eng" cx="110" cy="110" r="110" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#007c8a" />
+                <stop offset="100%" stop-color="#09f8ff" />
+              </radialGradient>
+
+              <radialGradient id="grad-pm" cx="110" cy="110" r="110" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#6b0000" />
+                <stop offset="100%" stop-color="#d90000" />
+              </radialGradient>
+
+              <radialGradient id="grad-is" cx="110" cy="110" r="110" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#b88600" />
+                <stop offset="100%" stop-color="#ffd809" />
+              </radialGradient>
+            </defs>
+
             <g class="pie-slices-group" transform="rotate(-45 110 110)">
               <!-- 1. Data Analytics -->
               <path
                 class="pie-slice"
                 d="M 110 110 L 110 14 A 96 96 0 0 1 206 110 Z"
-                fill="#8c52ff"
+                fill="url(#grad-da)"
                 data-target="da"
               />
 
@@ -24,7 +47,7 @@
               <path
                 class="pie-slice"
                 d="M 110 110 L 206 110 A 96 96 0 0 1 110 206 Z"
-                fill="#09f8ff"
+                fill="url(#grad-eng)"
                 data-target="eng"
               />
 
@@ -32,7 +55,7 @@
               <path
                 class="pie-slice"
                 d="M 110 110 L 110 206 A 96 96 0 0 1 14 110 Z"
-                fill="#d90000"
+                fill="url(#grad-pm)"
                 data-target="pm"
               />
 
@@ -40,7 +63,7 @@
               <path
                 class="pie-slice"
                 d="M 110 110 L 14 110 A 96 96 0 0 1 110 14 Z"
-                fill="#ffd809"
+                fill="url(#grad-is)"
                 data-target="is"
               />
             </g>
