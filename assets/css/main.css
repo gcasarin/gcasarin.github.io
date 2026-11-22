@@ -4327,6 +4327,12 @@ section,
 
 /* Riduzione leggera del titolo dell'hero */
 .c-hero__title {
-  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
-  line-height: 1.18;
+  font-size: clamp(1.75rem, 3.2vw, 3rem);
+  line-height: 1.2;
+}
+
+/* Riduzione leggera del titolo del contact form */
+.c-contact-form__contact-title {
+  font-size: clamp(1.75rem, 3.2vw, 3rem);
+  line-height: 1.2;
 }
