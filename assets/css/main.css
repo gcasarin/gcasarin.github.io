@@ -4316,13 +4316,13 @@ pre code {
 /* Riduzione spazi tra le sezioni della home */
 section,
 .section {
-    padding-top: 32px;
+    padding-top: 24px;
     padding-bottom: 32px;
 }
 
 /* Riduce lo spazio extra prima del footer */
 .footer {
-    margin-top: 32px;
+    margin-top: 40px;
 }
 
 :root {
