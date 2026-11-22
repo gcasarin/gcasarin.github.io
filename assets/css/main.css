@@ -4378,3 +4378,19 @@ section,
     font-size: var(--contact-title-size-mobile) !important;
   }
 }
+
+/* Pulsante Linkedin contact form */
+.c-contact-form__linkedin-box {
+  margin-top: 20px;
+}
+
+.c-contact-form__linkedin-text {
+  margin: 0 0 10px 0;
+  font-size: 0.95rem;
+}
+
+.c-contact-form__linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
