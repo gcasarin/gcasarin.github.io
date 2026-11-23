@@ -4330,13 +4330,21 @@ section,
   --hero-title-size: 2.7rem;
   --projects-title-size: 2.5rem;
   --skills-title-size: 2.5rem;
-  --contact-title-size: 3rem;
+  --contact-title-size: 2.25rem; /* ridotto per allinearlo a "Let's Connect on LinkedIn" */
+  --contact-linkedin-heading-size: 2.25rem;
+
+  /* Immagine nella sezione LinkedIn (DESKTOP) */
+  --contact-split-img-max-width: 540px; /* aumentato da 440px */
 
   /* Regolazioni separate MOBILE (sotto i 768px) */
   --hero-title-size-mobile: 1.9rem;
   --projects-title-size-mobile: 1.8rem;
   --skills-title-size-mobile: 1.8rem;
-  --contact-title-size-mobile: 2.25rem;
+  --contact-title-size-mobile: 1.65rem; /* ridotto su mobile */
+  --contact-linkedin-heading-size-mobile: 1.65rem;
+
+  /* Immagine nella sezione LinkedIn (MOBILE) */
+  --contact-split-img-max-width-mobile: 100%;
 }
 
 /* Applicazione desktop */
@@ -4352,6 +4360,11 @@ section,
 
 .skills-section .section-title {
   font-size: var(--skills-title-size) !important;
+  line-height: 1.2;
+}
+
+.contact-linkedin-split__left .section__title {
+  font-size: var(--contact-linkedin-heading-size) !important;
   line-height: 1.2;
 }
 
@@ -4374,8 +4387,20 @@ section,
     font-size: var(--skills-title-size-mobile) !important;
   }
 
+  .contact-linkedin-split__left .section__title {
+    font-size: var(--contact-linkedin-heading-size-mobile) !important;
+  }
+
   .c-contact-form__contact-title {
     font-size: var(--contact-title-size-mobile) !important;
+  }
+
+  .contact-linkedin-split__right {
+    flex: 1 1 100%;
+  }
+
+  .contact-linkedin-split__image img {
+    max-width: var(--contact-split-img-max-width-mobile);
   }
 }
 
@@ -4441,13 +4466,13 @@ section,
 }
 
 .contact-linkedin-split__right {
-  flex: 1 1 320px;
+  flex: 1.15 1 360px;
   text-align: center;
 }
 
 .contact-linkedin-split__image img {
   width: 100%;
-  max-width: 440px;
+  max-width: var(--contact-split-img-max-width);
   height: auto;
   border-radius: 14px;
   display: block;
