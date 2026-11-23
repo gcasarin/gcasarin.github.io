@@ -4398,21 +4398,27 @@ section,
   justify-content: center;
   gap: 8px;
   background-color: #0A66C2;
-  border-color: #0A66C2;
-  color: #ffffff;
+  border: 2px solid #0A66C2;
+  color: #ffffff !important;
+  font-weight: 700 !important;
   text-decoration: none;
   transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.c-contact-form__linkedin-btn span,
+.c-contact-form__linkedin-btn i {
+  color: #ffffff !important;
+  font-weight: 700 !important;
 }
 
 .c-contact-form__linkedin-btn:hover,
 .c-contact-form__linkedin-btn:focus {
   background-color: #004182;
   border-color: #004182;
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
   transform: translateY(-1px);
 }
-
 
 /* Gestione pagina Contact */
 .contact-linkedin-split {
@@ -4444,6 +4450,12 @@ section,
   max-width: 440px;
   height: auto;
   border-radius: 14px;
-  object-fit: cover;
+  display: block;
+  margin: 0 auto;
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+}
+
+/* Spazio extra sotto il contact form */
+.c-contact-form {
+  margin-bottom: 60px;
 }
