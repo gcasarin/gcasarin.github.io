@@ -1,45 +1,34 @@
 ---
 layout: page
-title:  Let's Connect!
+title:  Contact
+hide_title: true
 description: Connect with me on Linkedin or drop me a message
 date:   2026-11-22 15:01:35 +0300
 ---
 
-<!-- begin linkedin connect split section -->
+<!-- begin linkedin connect section -->
 <section class="section contact-linkedin-hero">
   <div class="container">
     <div class="row">
       <div class="col col-12">
-        <div class="contact-linkedin-split">
-
-          <div class="contact-linkedin-split__left">
-            <h2 class="section__title">Let's Connect on LinkedIn</h2>
-            <p class="contact-linkedin-split__text">
-              Want to reach out directly, network, or send a quick message? Connect with me on LinkedIn and let's start a conversation.
-            </p>
-            <a class="c-button c-button--large c-contact-form__linkedin-btn"
-               href="https://www.linkedin.com/in/gabriele-casarin06/"
-               target="_blank"
-               rel="noopener noreferrer">
-              <i class="ion ion-logo-linkedin" aria-hidden="true"></i>
-              <span>LinkedIn</span>
-            </a>
-          </div>
-
-          <div class="contact-linkedin-split__right">
-            {% if page.image %}
-              <div class="contact-linkedin-split__image">
-                <img loading="lazy" src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.title }}">
-              </div>
-            {% endif %}
-          </div>
-
+        <div class="contact-linkedin-box">
+          <h2 class="section__title">Let's Connect on LinkedIn</h2>
+          <p class="contact-linkedin-box__text">
+            Want to reach out directly, network, or send a quick message? Connect with me on LinkedIn and let's start a conversation.
+          </p>
+          <a class="c-button c-button--large c-contact-form__linkedin-btn"
+             href="https://www.linkedin.com/in/gabriele-casarin06/"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="ion ion-logo-linkedin" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- end linkedin connect split section -->
+<!-- end linkedin connect section -->
 
 <!-- begin contact -->
 <div class="c-contact-form" id="contact">
@@ -53,7 +42,7 @@ date:   2026-11-22 15:01:35 +0300
             <p class="c-contact-form__contact-description">{{ site.data.settings.contact_form__settings.form_description }}</p>
           </div>
           <form class="c-contact-form__form"
-            action="{{site.data.settings.contact_form__settings.form_action_url}}"
+            action="{{ site.data.settings.contact_form__settings.form_action_url }}"
             method="POST">
             <div class="c-contact-form__form-group">
               <label class="c-contact-form__form-label screen-reader-text" for="form-name">Your Name</label>
