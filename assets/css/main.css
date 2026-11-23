@@ -4375,18 +4375,6 @@ section,
 
 /* Override per versione mobile */
 @media (max-width: 767px) {
-  .c-hero__title {
-    font-size: var(--hero-title-size-mobile) !important;
-  }
-
-  .projects .section__title {
-    font-size: var(--projects-title-size-mobile) !important;
-  }
-
-  .skills-section .section-title {
-    font-size: var(--skills-title-size-mobile) !important;
-  }
-
   .contact-linkedin-split__left .section__title {
     font-size: var(--contact-linkedin-heading-size-mobile) !important;
   }
@@ -4397,6 +4385,7 @@ section,
 
   .contact-linkedin-split__right {
     flex: 1 1 100%;
+    order: -1; /* mostra prima l'immagine su mobile */
   }
 
   .contact-linkedin-split__image img {
