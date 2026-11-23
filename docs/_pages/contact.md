@@ -13,9 +13,9 @@ date:   2026-11-22 15:01:35 +0300
         <div class="contact-linkedin-split">
 
           <div class="contact-linkedin-split__left">
-            <h2 class="section__title">Let's Connect on LinkedIn</h2>
+            <h2 class="section__title">Join me on LinkedIn</h2>
             <p class="contact-linkedin-split__text">
-              Want to reach out directly, network, or send a quick message? Connect with me on LinkedIn and let's start a conversation.
+              Want to network or send a quick message? Connect with me on LinkedIn and let's start a conversation.
             </p>
             <a class="c-button c-button--large c-contact-form__linkedin-btn"
                href="https://www.linkedin.com/in/gabriele-casarin06/"
