@@ -1,14 +1,14 @@
 title: Tools & Certifications
 items:
-  - name: Python
-    icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg
+  - name: Excel
+    icon: /images/icons/excel.svg
   - name: SQL
-    icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg
-  - name: R
-    icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg
-  - name: Git
-    icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg
-  - name: Docker
-    icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg
-  - name: AWS
-    icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg
+    icon: /images/icons/sql.svg
+  - name: Python
+    icon: /images/icons/python.svg
+  - name: Scikit-Learn
+    icon: /images/icons/scikit-learn.svg
+  - name: Tableau
+    icon: /images/icons/tableau.svg
+  - name: Python
+    icon: /images/icons/capm.png
