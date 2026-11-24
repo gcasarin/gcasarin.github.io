@@ -4325,6 +4325,11 @@ section,
     margin-top: 40px;
 }
 
+/* Spazio extra sotto il contact form */
+.c-contact-form {
+  margin-bottom: 60px;
+}
+
 :root {
   /* Regolazioni separate DESKTOP */
   --hero-title-size: 2.7rem;
@@ -4451,7 +4456,9 @@ section,
   transform: translateY(-1px);
 }
 
-/* Gestione pagina Contact */
+/*---------------------------- 
+    Gestione pagina Contact */
+
 .contact-linkedin-split {
   display: flex;
   flex-wrap: wrap;
@@ -4489,18 +4496,15 @@ section,
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
 }
 
-/* Spazio extra sotto il contact form */
-.c-contact-form {
-  margin-bottom: 60px;
-}
-
 /* -----------------------------------------------
    BANNER SCORREVOLE TOOLS & CERTIFICATIONS*/
 
 :root {
   --marquee-title-size: 2.5rem;
   --marquee-title-size-mobile: 1.8rem;
-  --marquee-speed: 25s; /* aumenta per rallentare, diminuisci per velocizzare */
+  --marquee-speed: 26s;
+  --marquee-icon-height: 44px;
+  --marquee-icon-height-mobile: 34px;
 }
 
 .tools-marquee-section .section__title {
@@ -4514,55 +4518,51 @@ section,
   }
 }
 
-.tools-marquee {
+.tools-marquee-banner {
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 16px 0;
-  mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  padding: 28px 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  mask-image: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
 }
 
 .tools-marquee__track {
   display: flex;
+  align-items: center;
   width: max-content;
-  gap: 24px;
+  gap: 56px;
   animation: marqueeScroll var(--marquee-speed) linear infinite;
 }
 
-.tools-marquee:hover .tools-marquee__track {
+.tools-marquee-banner:hover .tools-marquee__track {
   animation-play-state: paused;
 }
 
 .tools-marquee__item {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 24px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
-  white-space: nowrap;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.tools-marquee__item:hover {
-  transform: translateY(-2px);
-  border-color: #0050d0;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .tools-marquee__item img {
-  width: 32px;
-  height: 32px;
+  height: var(--marquee-icon-height);
+  width: auto;
+  max-width: 140px;
   object-fit: contain;
-  border-radius: 0;
+  border-radius: 0 !important;
+  opacity: 0.9;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-.tools-marquee__item span {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #110e38;
+.tools-marquee__item:hover img {
+  transform: scale(1.08);
+  opacity: 1;
 }
 
 @keyframes marqueeScroll {
@@ -4570,23 +4570,23 @@ section,
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-50% - 12px));
+    transform: translateX(calc(-50% - 28px)); /* -50% della pista + metà del gap (56px / 2) */
   }
 }
 
 @media (max-width: 767px) {
-  .tools-marquee__track {
-    gap: 16px;
+  .tools-marquee-banner {
+    padding: 20px 0;
+    border-radius: 12px;
   }
 
-  .tools-marquee__item {
-    padding: 10px 18px;
-    gap: 10px;
+  .tools-marquee__track {
+    gap: 36px;
   }
 
   .tools-marquee__item img {
-    width: 26px;
-    height: 26px;
+    height: var(--marquee-icon-height-mobile);
+    max-width: 110px;
   }
 
   @keyframes marqueeScroll {
@@ -4594,7 +4594,7 @@ section,
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-50% - 8px));
+      transform: translateX(calc(-50% - 18px)); /* metà del gap mobile (36px / 2) */
     }
   }
 }
