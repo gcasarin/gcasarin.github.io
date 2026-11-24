@@ -4500,42 +4500,33 @@ section,
    BANNER SCORREVOLE TOOLS & CERTIFICATIONS*/
 
 :root {
-  --marquee-title-size: 2.5rem;
-  --marquee-title-size-mobile: 1.8rem;
   --marquee-speed: 26s;
-  --marquee-icon-height: 44px;
-  --marquee-icon-height-mobile: 34px;
+  --marquee-icon-height: 64px;        /* icone più grandi su desktop */
+  --marquee-icon-height-mobile: 48px; /* icone più grandi su mobile */
 }
 
-.tools-marquee-section .section__title {
-  font-size: var(--marquee-title-size) !important;
-  line-height: 1.2;
-}
-
-@media (max-width: 767px) {
-  .tools-marquee-section .section__title {
-    font-size: var(--marquee-title-size-mobile) !important;
-  }
+.tools-marquee-section {
+  background-color: #ffffff;
 }
 
 .tools-marquee-banner {
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 28px 0;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
-  mask-image: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
+  padding: 16px 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
 }
 
 .tools-marquee__track {
   display: flex;
   align-items: center;
   width: max-content;
-  gap: 56px;
+  gap: 64px;
   animation: marqueeScroll var(--marquee-speed) linear infinite;
 }
 
@@ -4548,15 +4539,18 @@ section,
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .tools-marquee__item img {
   height: var(--marquee-icon-height);
   width: auto;
-  max-width: 140px;
+  max-width: 180px;
   object-fit: contain;
   border-radius: 0 !important;
-  opacity: 0.9;
+  opacity: 0.95;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
@@ -4570,23 +4564,22 @@ section,
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-50% - 28px)); /* -50% della pista + metà del gap (56px / 2) */
+    transform: translateX(calc(-50% - 32px)); /* metà del gap desktop (64px / 2) */
   }
 }
 
 @media (max-width: 767px) {
   .tools-marquee-banner {
-    padding: 20px 0;
-    border-radius: 12px;
+    padding: 12px 0;
   }
 
   .tools-marquee__track {
-    gap: 36px;
+    gap: 44px;
   }
 
   .tools-marquee__item img {
     height: var(--marquee-icon-height-mobile);
-    max-width: 110px;
+    max-width: 140px;
   }
 
   @keyframes marqueeScroll {
@@ -4594,8 +4587,9 @@ section,
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-50% - 18px)); /* metà del gap mobile (36px / 2) */
+      transform: translateX(calc(-50% - 22px)); /* metà del gap mobile (44px / 2) */
     }
   }
 }
+
 /*---------------------------------------*/
