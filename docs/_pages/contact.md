@@ -17,7 +17,7 @@ form_description: Have a project in mind, a question, or just want to say hi? Fi
           <div class="contact-linkedin-split__left">
             <h2 class="section__title">Let's connect on LinkedIn!</h2>
             <p class="contact-linkedin-split__text">
-              Join my network on LinkedIn to stay up to date with my recent projects, industry insights, and career milestones. 
+              Join my network on LinkedIn to stay up to date with my recent projects and industry insights. 
               Feel free to send a connection request or start a conversation there to share some good ideas.
             </p>
             <a class="c-button c-button--large c-contact-form__linkedin-btn"
