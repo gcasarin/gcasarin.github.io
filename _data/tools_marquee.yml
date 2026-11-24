@@ -10,5 +10,5 @@ items:
     icon: /images/icons/scikit-learn.svg
   - name: Tableau
     icon: /images/icons/tableau.svg
-  - name: Python
+  - name: CAPM
     icon: /images/icons/capm.png
