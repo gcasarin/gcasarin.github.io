@@ -3,7 +3,7 @@ layout: page
 title:  Contact
 description: Connect with me on Linkedin or drop me a message
 date:   2026-11-22 15:01:35 +0300
-form_title: ...or skip the social media and go straight to my inbox
+form_title: ...or go straight to my inbox
 form_description: Have a project in mind, a question, or just want to say hi? Fill out the form below and I'll get back to you shortly.
 ---
 
