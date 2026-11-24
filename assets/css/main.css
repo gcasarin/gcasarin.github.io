@@ -4334,7 +4334,7 @@ section,
   --contact-linkedin-heading-size: 2.25rem;
 
   /* Immagine nella sezione LinkedIn (DESKTOP) */
-  --contact-split-img-max-width: 560px; 
+  --contact-split-img-max-width: 680px; 
 
   /* Regolazioni separate MOBILE (sotto i 768px) */
   --hero-title-size-mobile: 1.9rem;
@@ -4380,8 +4380,20 @@ section,
 
 /* Override per versione mobile */
 @media (max-width: 767px) {
+  .contact-linkedin-split__left {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
   .contact-linkedin-split__left .section__title {
     font-size: var(--contact-linkedin-heading-size-mobile) !important;
+    text-align: center;
+  }
+
+  .contact-linkedin-split__text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .c-contact-form__contact-title {
