@@ -6,24 +6,22 @@
         <h2 class="section__title">{{ site.data.tools_marquee.title | default: "Tools & Certifications" }}</h2>
       </div>
     </div>
-  </div>
 
-  <div class="tools-marquee" aria-label="Software and Certifications">
-    <div class="tools-marquee__track">
-      {% for item in site.data.tools_marquee.items %}
-        <div class="tools-marquee__item">
-          <img src="{{ site.baseurl }}{{ item.icon }}" alt="{{ item.name }}" loading="lazy">
-          <span>{{ item.name }}</span>
-        </div>
-      {% endfor %}
+    <div class="tools-marquee-banner" aria-label="Software and Certifications">
+      <div class="tools-marquee__track">
+        {% for item in site.data.tools_marquee.items %}
+          <div class="tools-marquee__item">
+            <img src="{{ site.baseurl }}{{ item.icon }}" alt="{{ item.name }}" loading="lazy">
+          </div>
+        {% endfor %}
 
-      <!-- Duplicato per lo scorrimento infinito -->
-      {% for item in site.data.tools_marquee.items %}
-        <div class="tools-marquee__item" aria-hidden="true">
-          <img src="{{ site.baseurl }}{{ item.icon }}" alt="">
-          <span>{{ item.name }}</span>
-        </div>
-      {% endfor %}
+        <!-- Duplicato per scorrimento continuo -->
+        {% for item in site.data.tools_marquee.items %}
+          <div class="tools-marquee__item" aria-hidden="true">
+            <img src="{{ site.baseurl }}{{ item.icon }}" alt="">
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
