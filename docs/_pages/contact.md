@@ -3,7 +3,8 @@ layout: page
 title:  Contact
 description: Connect with me on Linkedin or drop me a message
 date:   2026-11-22 15:01:35 +0300
-form_title: ...Or drop me a message here!
+form_title: ...or skip the social media and go straight to my inbox
+form_description: Have a project in mind, a question, or just want to say hi? Fill out the form below and I'll get back to you shortly.
 ---
 
 <!-- begin linkedin connect split section -->
@@ -50,7 +51,7 @@ form_title: ...Or drop me a message here!
         <div class="c-contact-form__form-box">
           <div class="c-contact-form__contact-head">
             <h2 class="c-contact-form__contact-title">{{ page.form_title | default: site.data.settings.contact_form__settings.form_title }}</h2>
-            <p class="c-contact-form__contact-description">{{ site.data.settings.contact_form__settings.form_description }}</p>
+            <p class="c-contact-form__contact-description">{{ page.form_description | default: site.data.settings.contact_form__settings.form_description }}</p>         
           </div>
           <form class="c-contact-form__form"
             action="{{ site.data.settings.contact_form__settings.form_action_url }}"
