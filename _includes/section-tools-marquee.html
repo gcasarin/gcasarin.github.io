@@ -3,18 +3,22 @@
   <div class="container">
     <div class="tools-marquee-banner" aria-label="Software and Certifications">
       <div class="tools-marquee__track">
-        {% for item in site.data.tools_marquee.items %}
-          <div class="tools-marquee__item">
-            <img src="{{ site.baseurl }}{{ item.icon }}" alt="{{ item.name }}" loading="lazy">
-          </div>
-        {% endfor %}
+        <div class="tools-marquee__group">
+          {% for item in site.data.tools_marquee.items %}
+            <div class="tools-marquee__item">
+              <img src="{{ site.baseurl }}{{ item.icon }}" alt="{{ item.name }}">
+            </div>
+          {% endfor %}
+        </div>
 
-        <!-- Duplicato per scorrimento continuo -->
-        {% for item in site.data.tools_marquee.items %}
-          <div class="tools-marquee__item" aria-hidden="true">
-            <img src="{{ site.baseurl }}{{ item.icon }}" alt="">
-          </div>
-        {% endfor %}
+        <!-- Duplicato identico per scorrimento continuo senza stacchi -->
+        <div class="tools-marquee__group" aria-hidden="true">
+          {% for item in site.data.tools_marquee.items %}
+            <div class="tools-marquee__item">
+              <img src="{{ site.baseurl }}{{ item.icon }}" alt="">
+            </div>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
