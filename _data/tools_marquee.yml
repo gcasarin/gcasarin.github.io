@@ -8,7 +8,11 @@ items:
     icon: /images/icons/python.svg
   - name: Scikit-Learn
     icon: /images/icons/scikit-learn.svg
+  - name: Plotly
+    icon: /images/icons/plotly.svg
   - name: Tableau
     icon: /images/icons/tableau.svg
+  - name: Matlab
+    icon: /images/icons/matlab.svg
   - name: CAPM
     icon: /images/icons/capm.png
