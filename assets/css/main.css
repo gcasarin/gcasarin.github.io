@@ -4347,6 +4347,11 @@ section,
   --contact-split-img-max-width-mobile: 100%;
 }
 
+/* Estende il contenitore della pagina Contact alla larghezza piena del .container */
+.post:has(.contact-linkedin-hero) {
+  max-width: 100%;
+}
+
 /* Applicazione desktop */
 .c-hero__title {
   font-size: var(--hero-title-size) !important;
@@ -4439,6 +4444,7 @@ section,
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   gap: 28px; /* leggermente più compatto per lasciare spazio all'immagine */
   margin-bottom: 40px;
 }
