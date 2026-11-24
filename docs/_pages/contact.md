@@ -14,9 +14,10 @@ form_title: ...Or drop me a message here!
         <div class="contact-linkedin-split">
 
           <div class="contact-linkedin-split__left">
-            <h2 class="section__title">Join me on LinkedIn</h2>
+            <h2 class="section__title">Let's connect on LinkedIn!</h2>
             <p class="contact-linkedin-split__text">
-              Want to network or send a quick message? Connect with me on LinkedIn and let's start a conversation.
+              Join my network on LinkedIn to stay up to date with my recent projects, industry insights, and career milestones. 
+              Feel free to send a connection request or start a conversation there to share some good ideas.
             </p>
             <a class="c-button c-button--large c-contact-form__linkedin-btn"
                href="https://www.linkedin.com/in/gabriele-casarin06/"
