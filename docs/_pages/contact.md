@@ -3,6 +3,7 @@ layout: page
 title:  Contact
 description: Connect with me on Linkedin or drop me a message
 date:   2026-11-22 15:01:35 +0300
+form_title: ...Or drop me a message here!
 ---
 
 <!-- begin linkedin connect split section -->
@@ -47,7 +48,7 @@ date:   2026-11-22 15:01:35 +0300
 
         <div class="c-contact-form__form-box">
           <div class="c-contact-form__contact-head">
-            <h2 class="c-contact-form__contact-title">{{ site.data.settings.contact_form__settings.form_title }}</h2>
+            <h2 class="c-contact-form__contact-title">{{ page.form_title | default: site.data.settings.contact_form__settings.form_title }}</h2>
             <p class="c-contact-form__contact-description">{{ site.data.settings.contact_form__settings.form_description }}</p>
           </div>
           <form class="c-contact-form__form"
