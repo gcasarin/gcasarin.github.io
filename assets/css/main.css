@@ -4500,7 +4500,7 @@ section,
    BANNER SCORREVOLE TOOLS & CERTIFICATIONS*/
 
 :root {
-  --marquee-speed: 26s;
+  --marquee-speed: 20s;
   --marquee-gap: 64px;
   --marquee-gap-mobile: 44px;
   --marquee-icon-height: 72px;
