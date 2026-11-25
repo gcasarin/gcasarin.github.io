@@ -14,3 +14,5 @@ items:
     icon: /images/icons/matlab.svg
   - name: CAPM
     icon: /images/icons/capm.png
+  - name: Github
+    icon: /images/icons/github.svg
