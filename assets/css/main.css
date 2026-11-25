@@ -4424,7 +4424,7 @@ section,
 .c-contact-form__linkedin-text {
   margin: 0 0 12px 0;
   font-size: 0.95rem;
-  color: #475569;
+  color: inherit;
   text-align: center;
 }
 
@@ -4475,7 +4475,7 @@ section,
 
 .contact-linkedin-split__text {
   margin: 14px 0 24px 0;
-  color: #475569;
+  color: inherit;
   font-size: 1rem;
   line-height: 1.65;
 }
