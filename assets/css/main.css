@@ -4591,3 +4591,25 @@ section,
 }
 
 /*---------------------------------------*/
+
+
+
+
+
+
+
+/*---------------------------------
+   UNIFORMAZIONE FONT CON IL TEMA */
+.tools-marquee-section,
+.tools-marquee-section *,
+.contact-linkedin-hero,
+.contact-linkedin-hero *,
+.contact-linkedin-split,
+.contact-linkedin-split *,
+.c-contact-form,
+.c-contact-form *,
+.c-contact-form__linkedin-box,
+.c-contact-form__linkedin-box * {
+  font-family: inherit;
+}
+------------------------------------*/
