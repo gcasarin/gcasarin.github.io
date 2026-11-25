@@ -4610,6 +4610,6 @@ section,
 .c-contact-form *,
 .c-contact-form__linkedin-box,
 .c-contact-form__linkedin-box * {
-  font-family: inherit;
+  font-family: inherit !important;
 }
 ------------------------------------*/
