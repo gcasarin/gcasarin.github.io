@@ -47,8 +47,21 @@
               />
             </g>
 
-            <!-- Singolo cerchio centrale -->
+            <clipPath id="donutImageClip">
+              <circle cx="110" cy="110" r="49" />
+            </clipPath>
+            
             <circle class="donut-hole" cx="110" cy="110" r="49" />
+            
+            <image
+              href="{{ '/images/arrows.png' | relative_url }}"
+              x="61"
+              y="61"
+              width="98"
+              height="98"
+              preserveAspectRatio="xMidYMid meet"
+              clip-path="url(#donutImageClip)"
+            />
           </svg>
         </div>
       </div>
@@ -166,10 +179,14 @@
     transform: scale(1.10);
   }
 
-  .skills-section .donut-hole {
-    fill: var(--bs-body-bg, #e0e0e0);
-    pointer-events: none;
-  }
+ .skills-section .donut-hole {
+  fill: transparent;
+  pointer-events: none;
+}
+
+.skills-section .skills-pie image {
+  pointer-events: none;
+}
 
   .skills-section .pie-pillars {
     display: flex;
