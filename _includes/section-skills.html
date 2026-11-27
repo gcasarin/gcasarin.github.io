@@ -12,25 +12,10 @@
         <div class="pie-wrapper">
           <svg class="skills-pie" viewBox="0 0 220 220" width="280" height="280" role="img" aria-label="Skills breakdown: Data Analytics, Engineering, Project Management, and Interpersonal Skills">
             <defs>
-              <!--Grandienti pie-slices-->
-              <radialGradient id="grad-da" cx="110" cy="110" r="110" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#e0cfff" />
-                <stop offset="100%" stop-color="#7c3aed" />
-              </radialGradient>
-              
-              <radialGradient id="grad-eng" cx="110" cy="110" r="110" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#b8ffff" />
-                <stop offset="100%" stop-color="#00c8d7" />
-              </radialGradient>
-              
-              <radialGradient id="grad-pm" cx="110" cy="110" r="110" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#ffb3b3" />
-                <stop offset="100%" stop-color="#ef233c" />
-              </radialGradient>
-              
-              <radialGradient id="grad-is" cx="110" cy="110" r="110" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#fff5b1" />
-                <stop offset="100%" stop-color="#ffc400" />
+              <!-- Gradiente radiale del foro centrale -->
+              <radialGradient id="grad-hole" cx="110" cy="110" r="34" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#211c72" />
+                <stop offset="100%" stop-color="#030617" />
               </radialGradient>
             </defs>
 
@@ -39,7 +24,7 @@
               <path
                 class="pie-slice"
                 d="M 110 110 L 110 14 A 96 96 0 0 1 206 110 Z"
-                fill="url(#grad-da)"
+                fill="#7c3aed"
                 data-target="da"
               />
 
@@ -47,7 +32,7 @@
               <path
                 class="pie-slice"
                 d="M 110 110 L 206 110 A 96 96 0 0 1 110 206 Z"
-                fill="url(#grad-eng)"
+                fill="#00c8d7"
                 data-target="eng"
               />
 
@@ -55,7 +40,7 @@
               <path
                 class="pie-slice"
                 d="M 110 110 L 110 206 A 96 96 0 0 1 14 110 Z"
-                fill="url(#grad-pm)"
+                fill="#ef233c"
                 data-target="pm"
               />
 
@@ -63,13 +48,13 @@
               <path
                 class="pie-slice"
                 d="M 110 110 L 14 110 A 96 96 0 0 1 110 14 Z"
-                fill="url(#grad-is)"
+                fill="#ffc400"
                 data-target="is"
               />
             </g>
 
-            <!-- Foro centrale per effetto donut -->
-            <circle class="donut-hole" cx="110" cy="110" r="46" />
+            <!-- Foro centrale più piccolo, con gradiente -->
+            <circle class="donut-hole" cx="110" cy="110" r="34" />
           </svg>
         </div>
       </div>
@@ -118,7 +103,7 @@
               <h4 class="pie-pillar__title">Interpersonal Skills</h4>
             </div>
             <ul class="pie-pillar__list">
-              Client consulting • Effective communication • Team working 
+              Client consulting • Effective communication • Team working
             </ul>
           </div>
 
@@ -196,9 +181,9 @@
     transform: scale(1.10);
   }
 
-  /* Colore del foro centrale allineato allo sfondo della pagina */
+  /* Gradiente del foro centrale */
   .skills-section .donut-hole {
-    fill: #010226;
+    fill: url(#grad-hole);
     pointer-events: none;
   }
 
