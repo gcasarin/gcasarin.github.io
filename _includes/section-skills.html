@@ -17,19 +17,6 @@
             role="img"
             aria-label="Skills breakdown: Data Analytics, Engineering, Project Management, and Interpersonal Skills"
           >
-            <defs>
-              <radialGradient
-                id="grad-hole"
-                cx="110"
-                cy="110"
-                r="7.5"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0%" stop-color="#0e02a8" />
-                <stop offset="100%" stop-color="#110E38" />
-              </radialGradient>
-            </defs>
-
             <g class="pie-slices-group" transform="rotate(-45 110 110)">
               <path
                 class="pie-slice"
@@ -60,11 +47,8 @@
               />
             </g>
 
-            <!-- Cerchio esterno: colore dello sfondo del tema -->
-            <circle class="donut-hole-outer" cx="110" cy="110" r="50" />
-
-            <!-- Cerchio interno sovrapposto: gradiente -->
-            <circle class="donut-hole-inner" cx="110" cy="110" r="15" />
+            <!-- Singolo cerchio centrale -->
+            <circle class="donut-hole" cx="110" cy="110" r="52" />
           </svg>
         </div>
       </div>
@@ -182,15 +166,8 @@
     transform: scale(1.10);
   }
 
-  /* Cerchio esterno: colore dello sfondo del tema */
-  .skills-section .donut-hole-outer {
-    fill: var(--bs-body-bg, #F6F6F6);
-    pointer-events: none;
-  }
-
-  /* Cerchio interno sovrapposto: gradiente */
-  .skills-section .donut-hole-inner {
-    fill: url(#grad-hole);
+  .skills-section .donut-hole {
+    fill: var(--bs-body-bg, #ffffff);
     pointer-events: none;
   }
 
@@ -307,7 +284,5 @@
       pillar.addEventListener("mouseenter", () => setHighlight(pillar.dataset.slice));
       pillar.addEventListener("mouseleave", clearHighlight);
     });
-  });
-</script>
   });
 </script>
