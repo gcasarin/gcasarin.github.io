@@ -12,27 +12,26 @@
         <div class="pie-wrapper">
           <svg class="skills-pie" viewBox="0 0 220 220" width="280" height="280" role="img" aria-label="Skills breakdown: Data Analytics, Engineering, Project Management, and Interpersonal Skills">
             <defs>
-              <!-- Gradiente radiale dall'esterno (100%) verso l'interno (0%) -->
-              <radialGradient id="grad-da" cx="110" cy="110" r="110" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#4c1d95" />
-                <stop offset="100%" stop-color="#8c52ff" />
+              <!--Grandienti pie-slices-->
+             <radialGradient id="grad-da" cx="110" cy="110" r="110" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#c59fff" />
+                <stop offset="100%" stop-color="#4c1d95" />
               </radialGradient>
 
               <radialGradient id="grad-eng" cx="110" cy="110" r="110" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#007c8a" />
-                <stop offset="100%" stop-color="#09f8ff" />
+                <stop offset="0%" stop-color="#8ffaff" />
+                <stop offset="100%" stop-color="#007c8a" />
               </radialGradient>
-
+              
               <radialGradient id="grad-pm" cx="110" cy="110" r="110" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#6b0000" />
-                <stop offset="100%" stop-color="#d90000" />
+                <stop offset="0%" stop-color="#ff7777" />
+                <stop offset="100%" stop-color="#6b0000" />
               </radialGradient>
-
+              
               <radialGradient id="grad-is" cx="110" cy="110" r="110" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#b88600" />
-                <stop offset="100%" stop-color="#ffd809" />
+                <stop offset="0%" stop-color="#fff09a" />
+                <stop offset="100%" stop-color="#b88600" />
               </radialGradient>
-            </defs>
 
             <g class="pie-slices-group" transform="rotate(-45 110 110)">
               <!-- 1. Data Analytics -->
@@ -262,12 +261,13 @@
   .skills-section .pie-pillar__title {
     margin: 0;
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 1.20rem;
   }
 
   .skills-section .pie-pillar__list {
     margin: 0;
     padding-left: 1.2rem;
+    font-size: 0.96rem;
     color: #334155;
   }
 
